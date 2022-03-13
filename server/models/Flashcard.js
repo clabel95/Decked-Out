@@ -1,4 +1,4 @@
-//keys and valles
+//keys and values
 //sideA
 //sideB
 //optional noteSideA
