@@ -1,58 +1,58 @@
 [
     {
-        "SideA": "What three European countries are commonly referred to as the 'Baltic Tigers' due to their economic growth in the 1990s?",
-        "SideB": "Estonia, Latvia, and Lithuania"        
+        "sideA": "What three European countries are commonly referred to as the 'Baltic Tigers' due to their economic growth in the 1990s?",
+        "sideB": "Estonia, Latvia, and Lithuania"        
     },
     {
-        "SideA": "What countries were united until they divided along religious lines in 1947?",
-        "SideB": "India and Pakistan"
+        "sideA": "What countries were united until they divided along religious lines in 1947?",
+        "sideB": "India and Pakistan"
     },
     {
-        "SideA": "What was the last African country to gain independence from a European power?",
-        "SideB": "Zimbabwe, from the United Kingdom, in 1980"
+        "sideA": "What was the last African country to gain independence from a European power?",
+        "sideB": "Zimbabwe, from the United Kingdom, in 1980"
     },
     {
-        "SideA": "What country has the most islands in the world?",
-        "SideB": "Sweden"
+        "sideA": "What country has the most islands in the world?",
+        "sideB": "Sweden"
     },
     {
-        "SideA": "What is the smallest country in the world?",
-        "SideB": "The Vatican"
+        "sideA": "What is the smallest country in the world?",
+        "sideB": "The Vatican"
     },
     {
-        "SideA": "What Middle Eastern country is known for it's wealth, and has the highest GDP per capita in the world?",
-        "SideB": "Qatar"
+        "sideA": "What Middle Eastern country is known for it's wealth, and has the highest GDP per capita in the world?",
+        "sideB": "Qatar"
     },
     {
-        "SideA": "What city was known as the 'Pearl of the Orient', and was returned to Chinese rule in 1997?",
-        "SideB": "Hong Kong"
+        "sideA": "What city was known as the 'Pearl of the Orient', and was returned to Chinese rule in 1997?",
+        "sideB": "Hong Kong"
     },
     {
-        "SideA": "What city has the highest revenue from legalized gambling?",
-        "SideB": "Macau, China"
+        "sideA": "What city has the highest revenue from legalized gambling?",
+        "sideB": "Macau, China"
     },
     {
-        "SideA": "What US State was the final to be admitted?",
-        "SideB": "Hawaii in 1959"
+        "sideA": "What US State was the final to be admitted?",
+        "sideB": "Hawaii in 1959"
     },
     {
-        "SideA": "What was the first country in Africa to gain independence from a European power?",
-        "SideB": "Ghana, in 1957."
+        "sideA": "What was the first country in Africa to gain independence from a European power?",
+        "sideB": "Ghana, in 1957."
     },
     {
-        "SideA": "What country exited the European Union in 2020?",
-        "SideB": "The United Kingdom"
+        "sideA": "What country exited the European Union in 2020?",
+        "sideB": "The United Kingdom"
     },
     {
-        "SideA": "What is the most recent addition to NATO?",
-        "SideB": "North Macedonia, in 2020."
+        "sideA": "What is the most recent addition to NATO?",
+        "sideB": "North Macedonia, in 2020."
     },
     {
-        "SideA": "What is the largest city (by municipal area) in the world?",
-        "SideB": "Chongqing, China"
+        "sideA": "What is the largest city (by municipal area) in the world?",
+        "sideB": "Chongqing, China"
     },
     {
-        "SideA": "What is the official name of Taiwan?",
-        "SideB": "The Republic of China"
+        "sideA": "What is the official name of Taiwan?",
+        "sideB": "The Republic of China"
     }
 ]

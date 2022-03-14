@@ -26,7 +26,9 @@ const flashcardSchema = new Schema(
             {
                 type: Schema.Types.ObjectId,
                 ref: 'deck',
+
             }
+            //WOULD LIKE TO SHOW DECK TITLE HERE
         ],
     }
 );

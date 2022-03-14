@@ -1,58 +1,58 @@
 [
     {
-       "SideA": "Which type of Pokemon is Gyarados?",
-       "SideB": "Water and Flying"
+       "sideA": "Which type of Pokemon is Gyarados?",
+       "sideB": "Water and Flying"
     },
     {
-        "SideA": "What is the first version of Pokemon video games released in 1996?",
-        "SideB": "Pokemon Red and Blue"
+        "sideA": "What is the first version of Pokemon video games released in 1996?",
+        "sideB": "Pokemon Red and Blue"
      },
      {
-        "SideA": "What Is The Difference Between A Female And A Male Pikachu?",
-        "SideB": "The shape of their tail"
+        "sideA": "What Is The Difference Between A Female And A Male Pikachu?",
+        "sideB": "The shape of their tail"
      },
      {
-        "SideA": "What Is The Most Common Type Of Pokemon?",
-        "SideB": "Water"
+        "sideA": "What Is The Most Common Type Of Pokemon?",
+        "sideB": "Water"
      },
      {
-        "SideA": "How Many Types Of Pokemon Are There?",
-        "SideB": "18, normal, fire, water, grass, flying, fighting, poison, electric, ground, rock, psychic, ice, bug, ghost, steel, dragon, dark, and fairy."
+        "sideA": "How Many Types Of Pokemon Are There?",
+        "sideB": "18, normal, fire, water, grass, flying, fighting, poison, electric, ground, rock, psychic, ice, bug, ghost, steel, dragon, dark, and fairy."
      },
      {
-        "SideA": "How Can You Break A Ditto's Disguise?",
-        "SideB": "Make it laugh"
+        "sideA": "How Can You Break A Ditto's Disguise?",
+        "sideB": "Make it laugh"
      },
      {
-        "SideA": "What Could Happen To You If You Grab One Of The Tails Of A Ninetales?",
-        "SideB": "Cursed for 1000 years"
+        "sideA": "What Could Happen To You If You Grab One Of The Tails Of A Ninetales?",
+        "sideB": "Cursed for 1000 years"
      },
      {
-        "SideA": "Who is the First Pokemon in the Pokedex?",
-        "SideB": "Bulbasaur"
+        "sideA": "Who is the First Pokemon in the Pokedex?",
+        "sideB": "Bulbasaur"
      },
      {
-        "SideA": "What's the only pokemon that could devolve?",
-        "SideB": "Slowbro"
+        "sideA": "What's the only pokemon that could devolve?",
+        "sideB": "Slowbro"
      },
      {
-        "SideA": "What does a critical hit mean?",
-        "SideB": "An attack that does more damage, between 1.5x and 1.95x depending on the level of the attacker."
+        "sideA": "What does a critical hit mean?",
+        "sideB": "An attack that does more damage, between 1.5x and 1.95x depending on the level of the attacker."
      },
      {
-        "SideA": "What type is Weezing?",
-        "SideB": "Poison"
+        "sideA": "What type is Weezing?",
+        "sideB": "Poison"
      },
      {
-        "SideA": "What are the names of the three legendary birds in the first generation?",
-        "SideB": "Articuno, Moltres, and Zapdos"
+        "sideA": "What are the names of the three legendary birds in the first generation?",
+        "sideB": "Articuno, Moltres, and Zapdos"
      },
      {
-        "SideA": "In its highest evolved form, how many heads will Diglett have?",
-        "SideB": "Three heads."
+        "sideA": "In its highest evolved form, how many heads will Diglett have?",
+        "sideB": "Three heads."
      },    
      {
-        "SideA": "Which Pokemon can evolve into 8 different forms, depending on how it is raised?",
-        "SideB": "Eevee"
+        "sideA": "Which Pokemon can evolve into 8 different forms, depending on how it is raised?",
+        "sideB": "Eevee"
      }
 ]

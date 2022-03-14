@@ -21,17 +21,19 @@ const deckSchema = new Schema(
             default: Date.now(),
             //this will be a getter function
         },
-        //do we need another value here?  name from author schema?
+        //do we need another value here?  name from author schema? - 
         author:
             {
                 type: Schema.Types.ObjectId,
                 ref: 'user',
             },
         flashcards: [
-            {
+            {   
+                
                 type: Schema.Types.ObjectId,
                 ref: 'flashcard'
             }
+            //WOULD LIKE TO SHOW SIDEA HERE
         ],
     }
 );
