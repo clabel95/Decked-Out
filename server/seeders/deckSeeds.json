@@ -1,0 +1,18 @@
+[
+    {
+        "title": "Pokemon Trivia",
+        "category": "Trivia",
+        "description": "A Pokemon Trivia Quiz!"
+    },
+    {
+        "title": "Javascript Coding",
+        "category": "Studying",
+        "description": "A full-stack JS Study Guide!"
+
+    },
+    {
+        "title": "Geography Quiz",
+        "category": "Studying",
+        "description": "These Flashcards are down to Earth!"
+    }
+]

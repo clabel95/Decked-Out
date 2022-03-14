@@ -1,59 +1,59 @@
 [
     {
-        "SideA": "when should you set a variable to 'null'",
-        "SideB": "When you expect it to contain a reference to an object. That way, you can explicitly check for the value null to see if the var has been filled with an object reference."  
+        "sideA": "when should you set a variable to 'null'",
+        "sideB": "When you expect it to contain a reference to an object. That way, you can explicitly check for the value null to see if the var has been filled with an object reference."  
     },
     {
-        "SideA": "What is a 'unary' operator?",
-        "SideB": "One that only operates on one value, like ++ or -- as in ++var."        
+        "sideA": "What is a 'unary' operator?",
+        "sideB": "One that only operates on one value, like ++ or -- as in ++var."        
     },
     {
-        "SideA": "How do the constructor, prototype, and instances refer to one another in the prototype pattern?",
-        "SideB": "Constructor has a property called prototype, which is an object. Prototype has a property called constructor that points back at the constructor. Each instance has a property called prototype which points to the prototype object."        
+        "sideA": "How do the constructor, prototype, and instances refer to one another in the prototype pattern?",
+        "sideB": "Constructor has a property called prototype, which is an object. Prototype has a property called constructor that points back at the constructor. Each instance has a property called prototype which points to the prototype object."        
     },
     {
-        "SideA": "When is try-catch statement most useful?",
-        "SideB": "For handling an error that is out of your control — for example, when dealing with a library whose code you can't touch."        
+        "sideA": "When is try-catch statement most useful?",
+        "sideB": "For handling an error that is out of your control — for example, when dealing with a library whose code you can't touch."        
     },
     {
-        "SideA": "Is React declarative or imperative?",
-        "SideB": "It's declarative. You say what you want to have happen rather than give step by step instructions."        
+        "sideA": "Is React declarative or imperative?",
+        "sideB": "It's declarative. You say what you want to have happen rather than give step by step instructions."        
     },
     {
-        "SideA": "Does case matter in naming React components?",
-        "SideB": "Yes, they must be uppercase or React will treat them as DOM tags."        
+        "sideA": "Does case matter in naming React components?",
+        "sideB": "Yes, they must be uppercase or React will treat them as DOM tags."        
     },
     {
-        "SideA": "Why is the index from an array not a good key for React?",
-        "SideB": "If order changes, performance can suffer."        
+        "sideA": "Why is the index from an array not a good key for React?",
+        "sideB": "If order changes, performance can suffer."        
     },
     {
-        "SideA": "What is function declaration hoisting?",
-        "SideB": "Before code begins running, the javascript engine 'hoists' functions to the top of the execution context. That way, a function can be called even if it doesn't appear in code until later."
+        "sideA": "What is function declaration hoisting?",
+        "sideB": "Before code begins running, the javascript engine 'hoists' functions to the top of the execution context. That way, a function can be called even if it doesn't appear in code until later."
     },
     {
-        "SideA": "What is the default type for a button element in a form?",
-        "SideB": "Submit."        
+        "sideA": "What is the default type for a button element in a form?",
+        "sideB": "Submit."        
     },
     {
-        "SideA": "What is JSON parse() method?",
-        "SideB": "JSON.parse(someJSON) will turn the JSON into a javascript object."
+        "sideA": "What is JSON parse() method?",
+        "sideB": "JSON.parse(someJSON) will turn the JSON into a javascript object."
     },
     {
-        "SideA": "What is a 'controlled component'?",
-        "SideB": "An input form where React controls state, e.g. input value = {this.state.value}."        
+        "sideA": "What is a 'controlled component'?",
+        "sideB": "An input form where React controls state, e.g. input value = {this.state.value}."        
     },
     {
-        "SideA": "Asynchronous setState() syntax?",
-        "SideB": "this.setState((prevState, props) => ({counter: prevState.counter + props.increment}));"
+        "sideA": "Asynchronous setState() syntax?",
+        "sideB": "this.setState((prevState, props) => ({counter: prevState.counter + props.increment}));"
         
     },
     {
-        "SideA": "What are the string regular expression methods?",
-        "SideB": "match() search(); replace(); split();"
+        "sideA": "What are the string regular expression methods?",
+        "sideB": "match() search(); replace(); split();"
     },
     {
-        "SideA": "How can you see if one node contains another?",
-        "SideB": "someNode.contains( otherNode )."
+        "sideA": "How can you see if one node contains another?",
+        "sideB": "someNode.contains( otherNode )."
     }
 ]
