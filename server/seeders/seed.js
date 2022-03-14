@@ -13,16 +13,34 @@ db.once('open', async () => {
         await Deck.deleteMany({})
         await User.deleteMany({})
 
+
+
         await User.create(userSeeds)
+        //await Deck.create(deckSeeds)
+        //await Flashcard.insertMany(pokeSeeds, codeSeeds, geoSeeds)
 
-
+        //CREATE DECKS AND POPULATE USER.AUTHOR WITH STARTER DECKS
+        //THIS WORKS!
         for (let i=0; i<deckSeeds.length; i++) {
-            const _id = await Deck.create(deckSeeds[i])
-            const deckAuthor = await User.findOneAndUpdate(
-                { decks: _id },
-                {  },
-                
+            const deckId = await Deck.create(deckSeeds[i])
+            //const authorId = await User.findById(userSeeds._id)
+            await User.findOneAndUpdate(
+                { $addToSet: {
+                    decks: deckId }
+                },
             )
+            // await Deck.findOneAndUpdate(
+            //     { $addToSet: {
+            //         author: authorId}
+            //     }
+            // )
+        }
+
+        //ADD AUTHOR TO DECK COLLECTION BY LOOPING THROUGH USER SEEDS
+        for (let j=0; j<userSeeds.length; j++) {
+            const authorId = await User.findById(userSeeds[j])
+            await Deck.populate(deck, { author: authorId }
+         )
         }
 
         // for (let i=0; i<pokeSeeds.length; i++) {
@@ -40,7 +58,6 @@ db.once('open', async () => {
         //     );
         // }
 
-        //await Flashcard.insertMany([pokeSeeds, codeSeeds, geoSeeds])
     } catch (err) {
         console.log(err);
         process.exit(1);
