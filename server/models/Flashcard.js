@@ -21,8 +21,9 @@ const flashcardSchema = new Schema(
                 type: Schema.Types.ObjectId,
                 ref: 'deck',
             },
+        ],
         deckTitle: {
-            type: String,
+            type: String
         }
             //WOULD LIKE TO SHOW DECK TITLE HERE
     }
