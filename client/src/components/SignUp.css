@@ -1,0 +1,94 @@
+.signUpPopUp{
+    position: relative;
+    height: 600px;
+    width: 628px;
+    min-width: 400px;
+    background-image: url('../Assets/greenSticky.png');
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: space-around;
+    
+}
+
+.popup-inner{
+    position: relative;
+    left: 15px;
+}
+
+#signUpHead{
+    font-family: liebelotte, sans-serif;
+    font-style: normal;
+    font-weight: 100;
+    font-size: 56px;
+    text-decoration: underline wavy black 2px;;
+    position: relative;
+    left: 140px;
+    top: -10px;
+    text-shadow: 2px 2px rgb(244, 135, 250);
+}
+
+#formSignUp{
+    line-height: 2.5;
+    font-family: liebelotte, sans-serif;
+    font-style: normal;
+    font-weight: 100;
+    font-size: 34px;
+    position: relative;
+    top: -150px;
+}
+
+.popup-inner .submit-btn{
+    /* text-decoration: underline wavy black 1px; */
+    position: relative;
+    bottom: -238px;
+    right: -154px;
+    border: lightskyblue 9px dotted;
+    text-shadow: 2px 2px lightskyblue;
+}
+
+input[type="text" i] {
+    /* padding: 1px 2px; */
+    line-height: 1.25;
+    font-size: 30px;
+}
+
+input {
+    writing-mode: horizontal-tb !important;
+    font-family: a-otf-ud-reimin-pr6n, sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    /* font-style: ;
+    font-variant-ligatures: ;
+    font-variant-caps: ;
+    font-variant-numeric: ;
+    font-variant-east-asian: ;
+    font-weight: ;
+    font-stretch: ;
+    font-size: ;
+    font-family: ; */
+    text-rendering: auto;
+    color: -internal-light-dark(black, rgba(255, 255, 255, 0.221));
+    letter-spacing: normal;
+    word-spacing: normal;
+    line-height: normal;
+    text-transform: none;
+    text-indent: 0px;
+    text-shadow: none;
+    display: relative;
+    text-align: start;
+    appearance: auto;
+    -webkit-rtl-ordering: logical;
+    cursor: text;
+    background-color: -internal-light-dark(rgb(166, 241, 242), rgb(59, 59, 59));
+    /* left: 2px; */
+    padding: 1px 2px;
+    border-width: 2px;
+    border-style: inset;
+    border-color: -internal-light-dark(rgb(118, 118, 118), rgb(133, 133, 133));
+    border-image: initial;
+    
+    
+}
+
