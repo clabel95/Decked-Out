@@ -18,34 +18,44 @@
 }
 
 #signUpHead{
-    font-family: liebelotte, sans-serif;
+    font-family: 'Amatic SC', cursive;
     font-style: normal;
     font-weight: 100;
-    font-size: 56px;
-    text-decoration: underline wavy black 2px;;
+    font-size: 64px;
+    text-decoration: underline wavy black 1px;;
     position: relative;
-    left: 140px;
-    top: -10px;
+    left: 180px;
+    top: -39px;
     text-shadow: 2px 2px rgb(244, 135, 250);
 }
 
 #formSignUp{
     line-height: 2.5;
-    font-family: liebelotte, sans-serif;
+    font-family: 'Amatic SC', cursive;
     font-style: normal;
     font-weight: 100;
-    font-size: 34px;
+    font-size: 37px;
     position: relative;
-    top: -22px;
+    top: -82px;
+    left: 5px;
 }
 
 .popup-inner .submit-btn{
     /* text-decoration: underline wavy black 1px; */
+    font-family: 'Amatic SC', cursive;
+    font-size: 52px;
     position: relative;
-    bottom: 10px;
-    right: -154px;
+    bottom: -19px;
+    right: 161px;
     border: lightskyblue 9px dotted;
     text-shadow: 2px 2px lightskyblue;
+
+}
+
+.popup-inner .submit-btn:hover{
+    cursor: pointer;
+    /* box-shadow: 0px 9px 7px -5px rgb(26, 26, 26); */
+    transform: scale(1.25);
 }
 
 input[type="text" i] {
@@ -56,9 +66,10 @@ input[type="text" i] {
 
 input {
     writing-mode: horizontal-tb !important;
-    font-family: a-otf-ud-reimin-pr6n, sans-serif;
+    font-family: 'Amatic SC', cursive;
     font-style: normal;
-    font-weight: 300;
+    font-weight: 500;
+    font-size: 34px;
     /* font-style: ;
     font-variant-ligatures: ;
     font-variant-caps: ;
@@ -74,7 +85,7 @@ input {
     word-spacing: normal;
     line-height: normal;
     text-transform: none;
-    text-indent: 0px;
+    text-indent: 3px;
     text-shadow: none;
     display: relative;
     text-align: start;
