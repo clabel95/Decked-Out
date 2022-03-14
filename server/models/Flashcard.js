@@ -22,14 +22,16 @@ const flashcardSchema = new Schema(
         noteSideB: {
             type: String,
         },
-        deck: [
+        deckId:
             {
                 type: Schema.Types.ObjectId,
                 ref: 'deck',
 
-            }
+            },
+        deckTitle: {
+            type: String,
+        }
             //WOULD LIKE TO SHOW DECK TITLE HERE
-        ],
     }
 );
 
