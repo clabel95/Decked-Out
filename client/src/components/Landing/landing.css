@@ -13,7 +13,7 @@ body {
     background-position: center;
     background-repeat: no-repeat;
     background-size:cover; 
-    height: 847px;
+    height: 907px;
 
 }
 
@@ -25,6 +25,8 @@ body {
     justify-content: center;
     font-size: 145px;
     color: #000000;
+    position: relative;
+    top: 5px;
 }
 
 #highlightLogin{
@@ -43,7 +45,7 @@ body {
     height: 108px;
     width: auto;
     position: relative;
-    top: 131px;
+    top: 129px;
     right: 288px;
     font-family: 'Satisfy', cursive;
     font-style: normal;
