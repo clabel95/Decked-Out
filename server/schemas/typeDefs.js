@@ -5,8 +5,8 @@ const typeDefs = gql`
     title: String
     category: String
     description: String
-    date_created: Date
     author: ID
+    date_created: String
     flashcards: [Flashcard]
   }
 
@@ -42,8 +42,8 @@ const typeDefs = gql`
 
   type Mutation {
     addUser(username: String!, email: String!, password: String!): Auth
-    addDeck(products: [ID]!): Deck
-    updateUser(fusername: String, email: String, password: String): User
+    addDeck(deck: [ID]!): Deck
+    updateUser(username: String, email: String, password: String): User
     updateDeck(_id: ID!, quantity: Int!): Deck
     login(email: String!, username: String!, password: String!): Auth
   }
