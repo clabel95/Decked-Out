@@ -36,13 +36,13 @@
     font-weight: 100;
     font-size: 34px;
     position: relative;
-    top: -150px;
+    top: -22px;
 }
 
 .popup-inner .submit-btn{
     /* text-decoration: underline wavy black 1px; */
     position: relative;
-    bottom: -238px;
+    bottom: 10px;
     right: -154px;
     border: lightskyblue 9px dotted;
     text-shadow: 2px 2px lightskyblue;
