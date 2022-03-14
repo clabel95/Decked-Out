@@ -1,5 +1,6 @@
 import React from "react";
 import Landing from "./components/Landing/Landing";
+import Carousel_Home from "./components/Carousel";
 import {
   ApolloClient,
   InMemoryCache,
