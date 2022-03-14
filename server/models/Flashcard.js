@@ -16,16 +16,17 @@ const flashcardSchema = new Schema(
         noteSideB: {
             type: String,
         },
-        deck: deckSchema,
+        deck: [
+            {
+                type: Schema.Types.ObjectId,
+                ref: 'deck',
+
+            }
+            //WOULD LIKE TO SHOW DECK TITLE HERE
+        ],
     }
 );
 
 const Flashcard = model('flashcard', flashcardSchema);
 
 module.exports = Flashcard;
-
-//keys and values
-//sideA
-//sideB
-//optional noteSideA
-//optional noteSideB

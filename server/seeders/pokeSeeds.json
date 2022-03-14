@@ -1,7 +1,7 @@
 [
     {
-        "sideA": "Which type of Pokemon is Gyarados?",
-        "sideB": "Water and Flying"
+       "sideA": "Which type of Pokemon is Gyarados?",
+       "sideB": "Water and Flying"
     },
     {
         "sideA": "What is the first version of Pokemon video games released in 1996?",
@@ -55,5 +55,4 @@
         "sideA": "Which Pokemon can evolve into 8 different forms, depending on how it is raised?",
         "sideB": "Eevee"
      }
-
 ]

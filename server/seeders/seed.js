@@ -6,7 +6,6 @@ const geoSeeds = require('./geoSeeds.json');
 const userSeeds = require('./userSeeds.json');
 const deckSeeds = require('./deckSeeds.json');
 
-
 db.once('open', async () => {
     try {
         await Flashcard.deleteMany({})
@@ -17,8 +16,6 @@ db.once('open', async () => {
 
         //CREATE DECKS AND POPULATE USER.decks WITH STARTER DECKS
         //THIS WORKS!
-        //flashcard.create to pass entire JSON
-        //
         for (let i=0; i<deckSeeds.length; i++) {
             const deckId = await Deck.create(deckSeeds[i])
             await User.findOneAndUpdate(
