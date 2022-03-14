@@ -18,7 +18,7 @@ body {
 }
 
 #header{
-    font-family: liebelotte, sans-serif;
+    font-family: 'Fredericka the Great', cursive;
     font-style: normal;
     font-weight: 100;
     display: flex;
@@ -45,7 +45,7 @@ body {
     position: relative;
     top: 131px;
     right: 288px;
-    font-family: liebelotte, sans-serif;
+    font-family: 'Satisfy', cursive;
     font-style: normal;
     font-weight: 100;
     font-size: 88px;
@@ -82,7 +82,7 @@ body {
     position: relative;
     top: 126px;
     right: 336px;
-    font-family: liebelotte, sans-serif;
+    font-family: 'Satisfy', cursive;
     font-style: normal;
     font-weight: 100;
     font-size: 88px;
