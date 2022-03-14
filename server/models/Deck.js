@@ -42,8 +42,6 @@ const Deck = model('deck', deckSchema);
 
 module.exports = Deck;
 
-
-
 //title
 //category
 //description

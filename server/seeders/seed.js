@@ -6,7 +6,6 @@ const geoSeeds = require('./geoSeeds.json');
 const userSeeds = require('./userSeeds.json');
 const deckSeeds = require('./deckSeeds.json');
 
-
 db.once('open', async () => {
     try {
         await Flashcard.deleteMany({})
