@@ -2,7 +2,7 @@ const jwt = require('jsonwebtoken');
 
 const secret = 'dilophosaurus';
 //WILL CHANGE TO LONGER TIME AFTER SUCCESSFUL TEST
-const expiration = '1m';
+const expiration = '2h';
 
 module.exports = {
     authMiddleWare: function ({ req }) {

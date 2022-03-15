@@ -12,7 +12,6 @@ const typeDefs = gql`
 
   type Flashcard {
     _id: ID
-    name: String
     sideA: String
     sideB: String
     noteSideA: String
@@ -35,14 +34,19 @@ const typeDefs = gql`
 
   type Query {
     decks: [Deck]
-    flashcard(category: ID, name: String): [Flashcard]
+    flashcards(category: ID, name: String): [Flashcard]
     flashcard(_id: ID!): Flashcard
     user: User
   }
-
   type Mutation {
     addUser(username: String!, email: String!, password: String!): Auth
     addDeck(deck: [ID]!): Deck
+    addFlashCard(
+      sideA: String!
+      sideB: String!
+      noteSideA: String 
+      noteSideB: String): Flashcard
+    updateFlashCard(sideA: String!, sideB: String!, noteSideA: String, noteSideB: String): Flashcard
     updateUser(username: String, email: String, password: String): User
     updateDeck(title: String!, category: String!, description: String): Deck
     login(email: String!, username: String!, password: String!): Auth
@@ -50,10 +54,3 @@ const typeDefs = gql`
 `;
 
 module.exports = typeDefs;
-
-// Card category/deck
-// id
-// name string
-
-//
-
