@@ -1,0 +1,130 @@
+body {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin-top: -40px;
+}
+
+#mainBackground {
+    background-image: url("../Assets/pencilAndCard.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size:cover; 
+    height: 907px;
+
+}
+
+#header{
+    font-family: 'Fredericka the Great', cursive;
+    font-style: normal;
+    font-weight: 100;
+    display: flex;
+    justify-content: center;
+    font-size: 145px;
+    color: #000000;
+    position: relative;
+    top: 5px;
+}
+
+#highlightLogin{
+    display: flex;
+    justify-content: center;
+    height: 360px;
+    margin-top: -83px;
+    margin-left: 270px;
+}
+
+#highlit{
+    opacity: 0.80;
+}
+
+#login{
+    height: 108px;
+    width: auto;
+    position: relative;
+    top: 136px;
+    right: 312px;
+    font-family: 'Fredericka the Great', cursive;
+    font-style: normal;
+    font-weight: 200;
+    font-size: 78px;
+    background-color:transparent ;
+    border: none;
+    text-decoration: 2px underline dashed;
+}
+
+#login:hover{
+    cursor: pointer;
+    /* box-shadow: 0px 9px 7px -5px rgb(26, 26, 26); */
+    transform: scale(1.25);
+    text-shadow: 2px 2px lightskyblue;
+}
+#signUp:hover{
+    cursor: pointer;
+    /* box-shadow: 0px 9px 7px -5px rgb(26, 26, 26); */
+    transform: scale(1.25);
+    text-shadow: 2px 2px rgb(96, 255, 114);
+    /* color: rgb(72, 223, 120); */
+}
+
+#highlightSignUp{
+    display: flex;
+    justify-content: center;
+    height: 350px;
+    margin-top: -73px;
+    margin-left: 348px;
+}
+
+#signUp{
+    height: 98px;
+    width: auto;
+    position: relative;
+    top: 117px;
+    right: 392px;
+    font-family: 'Fredericka the Great', cursive;
+    font-style: normal;
+    font-weight: 100;
+    font-size: 78px;
+    background-color:transparent;
+    border: none;
+    text-decoration: 2px underline dashed;
+}
+
+button {
+    appearance: auto;
+    writing-mode: horizontal-tb !important;
+    /* font-style: ;
+    font-variant-ligatures: ;
+    font-variant-caps: ;
+    font-variant-numeric: ;
+    font-variant-east-asian: ;
+    font-weight: ;
+    font-stretch: ;
+    font-size: ; */
+    font-style: normal;
+    font-weight: 100;
+    font-size: 88px;
+    font-family: liebelotte, sans-serif;
+    text-rendering: auto;
+    /* color: -internal-light-dark(black, white); */
+    letter-spacing: normal;
+    word-spacing: normal;
+    line-height: normal;
+    text-transform: none;
+    text-indent: 0px;
+    text-shadow: none;
+    display: inline-block;
+    text-align: center;
+    align-items: flex-start;
+    cursor: default;
+    box-sizing: border-box;
+    background-color:transparent;
+    margin: 0em;
+    /* padding: 1px 6px; */
+    /* border-width: 2px;
+    border-style: outset;
+    border-color: -internal-light-dark(rgb(118, 118, 118), rgb(133, 133, 133));
+    border-image: initial; */
+    border: none;
+    cursor:pointer;
+}
