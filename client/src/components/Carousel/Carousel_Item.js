@@ -1,6 +1,6 @@
 
 import React from 'react';
-import "../carousel_item.css";
+// import "../carousel_item.css";
 
 function Carousel_Item(props) {
     // Need to somehow link the buttons to the deck that is currently on that deck.
