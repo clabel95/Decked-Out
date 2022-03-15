@@ -2,7 +2,7 @@
     position: relative;
     height: 600px;
     width: 628px;
-    min-width: 400px;
+    min-width: 500px;
     background-image: url('../Assets/greenSticky.png');
     display: flex;
     justify-content: flex-start;
@@ -37,7 +37,7 @@
     font-size: 37px;
     position: relative;
     top: -82px;
-    left: 5px;
+    left: 62px;
 }
 
 .popup-inner .submit-btn{
