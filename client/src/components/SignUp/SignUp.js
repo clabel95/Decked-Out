@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './SignUp.css'
+import './SignUp.css';
 // 'use strict';
 
 
@@ -29,8 +29,8 @@ function SignUp(props){
 
     const handleFormSubmit = async (event) => {
         event.preventDefault();
-        console.log(`this is the state of the form ${formState}`)
-        // console.log(value);
+        console.log(`this is the state of the form ${formState.email}`)
+        
 
         try {
             const { data } = await addUser({
@@ -78,7 +78,7 @@ function SignUp(props){
                 
             </div>
         </div>
-        // console.log({formState})
+        
     ) : "";
     
 

@@ -5,9 +5,6 @@ body {
     margin-top: -40px;
 }
 
-
-
-
 #mainBackground {
     background-image: url("../Assets/pencilAndCard.png");
     background-position: center;
@@ -33,8 +30,8 @@ body {
     display: flex;
     justify-content: center;
     height: 360px;
-    margin-top: -100px;
-    margin-left: 241px;
+    margin-top: -83px;
+    margin-left: 270px;
 }
 
 #highlit{
@@ -45,12 +42,12 @@ body {
     height: 108px;
     width: auto;
     position: relative;
-    top: 129px;
-    right: 288px;
-    font-family: 'Satisfy', cursive;
+    top: 136px;
+    right: 312px;
+    font-family: 'Fredericka the Great', cursive;
     font-style: normal;
-    font-weight: 100;
-    font-size: 88px;
+    font-weight: 200;
+    font-size: 78px;
     background-color:transparent ;
     border: none;
     text-decoration: 2px underline dashed;
@@ -74,20 +71,20 @@ body {
     display: flex;
     justify-content: center;
     height: 350px;
-    margin-top: -93px;
-    margin-left: 267px;
+    margin-top: -73px;
+    margin-left: 348px;
 }
 
 #signUp{
     height: 98px;
     width: auto;
     position: relative;
-    top: 126px;
-    right: 336px;
-    font-family: 'Satisfy', cursive;
+    top: 117px;
+    right: 392px;
+    font-family: 'Fredericka the Great', cursive;
     font-style: normal;
     font-weight: 100;
-    font-size: 88px;
+    font-size: 78px;
     background-color:transparent;
     border: none;
     text-decoration: 2px underline dashed;
