@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Clayton Abel</title>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="stylesheet" type="text/css" href="./carousel_test.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    </head>
+​
+  <body>
+​
+        <header>
+            <nav class="light-blue lighten-1" role="navigation">
+                <div class="nav-wrapper container"><a id="logo-container" href="#" class="brand-logo">Decked Out</a>
+                  <ul class="right">
+                    <li><a href="#">Logout</a></li>
+                  </ul>
+​
+​
+                </div>
+              </nav>
+        </header>
+​
+        <main>
+            <ul id="slide-out" class="sidenav"> 
+                <li>
+                    <div class = "row">
+​
+                        <i class="col s2 material-icons" style ="font-size:45px">search</i>
+                        <div class="input-field col s10 ">
+                            <input placeholder="Search" type="text" class="validate">
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class = "row">
+                        <div class="input-field col s12">
+                            <select>
+                                <option value="" disabled selected>Categories</option>
+                                <option value="1">Sports</option>
+                                <option value="2">Pokemon</option>
+                                <option value="3">Games</option>
+                            </select>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class = "row">
+​
+                            <button class="btn waves-effect waves-light col s8 offset-s2" type="submit" name="action">Search
+                                <i class="material-icons right">send</i>
+                            </button> 
+​
+                    </div>
+                </li> 
+            </ul>
+            <a href="#" data-target="slide-out" class="sidenav-trigger right"><i class="material-icons">search</i></a>
+​
+            <div class="container">
+                <div class="carousel">
+​
+                    <div class="carousel-item row">
+                        <div class ="col s12">
+                            <div class = "card hoverable blue-grey black-text">
+                                <div class ="card-content white-text">
+                                    <span class = "card-title">Deck name</span>
+                                    <p>I am a very simple card. I am good at containing small bits of information.
+                                        I am convenient because I require little markup to use effectively.</p>
+                                </div>
+                                <div class="card-action">
+                                    <!-- <span class="activator"><i class="material-icons right">+</i></span>  -->
+                                    <a class="btn-floating btn-medium waves-effect waves-light light-blue "><i class="material-icons">edit</i></a>
+                                    <a class="btn-floating btn-medium waves-effect waves-light red"><i class="material-icons">delete_forever</i></a>
+                                    <a class="activator btn-floating btn-medium waves-effect waves-light green"><i class="material-icons">note_add</i></a>
+                                </div>
+                                <div class="card-reveal">
+                                    <span class="card-title grey-text text-darken-4">Notes<i class="material-icons right">check</i></span>
+                                    <div class="row">
+                                        <form class="col s12">
+                                          <div class="row">
+                                            <div class="input-field col s12">
+                                              <textarea id="textarea1" class="materialize-textarea"></textarea>
+                                            </div>
+                                          </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+​
+                    <div class="carousel-item row">
+                        <div class ="col s12">
+                            <div class = "card hoverable blue-grey black-text">
+                                <div class ="card-content white-text">
+                                    <span class = "card-title">Deck name</span>
+                                    <p>I am a very simple card. I am good at containing small bits of information.
+                                        I am convenient because I require little markup to use effectively.</p>
+                                </div>
+                                <div class="card-action">
+                                    <!-- <span class="activator"><i class="material-icons right">+</i></span>  -->
+                                    <a class="btn-floating btn-medium waves-effect waves-light light-blue "><i class="material-icons">edit</i></a>
+                                    <a class="btn-floating btn-medium waves-effect waves-light red"><i class="material-icons">delete_forever</i></a>
+                                    <a class="activator btn-floating btn-medium waves-effect waves-light green"><i class="material-icons">note_add</i></a>
+                                </div>
+                                <div class="card-reveal">
+                                    <span class="card-title grey-text text-darken-4">Notes<i class="material-icons right">check</i></span>
+                                    <div class="row">
+                                        <form class="col s12">
+                                          <div class="row">
+                                            <div class="input-field col s12">
+                                              <textarea id="textarea1" class="materialize-textarea"></textarea>
+                                            </div>
+                                          </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div> 
+                    </div>
+​
+                    <div class="carousel-item row">
+                        <div class ="col s12">
+                            <div class = "card hoverable blue-grey black-text">
+                                <div class ="card-content white-text">
+                                    <span class = "card-title">Deck name</span>
+                                    <p>I am a very simple card. I am good at containing small bits of information.
+                                        I am convenient because I require little markup to use effectively.</p>
+                                </div>
+                                <div class="card-action">
+                                    <!-- <span class="activator"><i class="material-icons right">+</i></span>  -->
+                                    <a class="btn-floating btn-medium waves-effect waves-light light-blue "><i class="material-icons">edit</i></a>
+                                    <a class="btn-floating btn-medium waves-effect waves-light red"><i class="material-icons">delete_forever</i></a>
+                                    <a class="activator btn-floating btn-medium waves-effect waves-light green"><i class="material-icons">note_add</i></a>
+                                </div>
+                                <div class="card-reveal">
+                                    <span class="card-title grey-text text-darken-4">Notes<i class="material-icons right">check</i></span>
+                                    <div class="row">
+                                        <form class="col s12">
+                                          <div class="row">
+                                            <div class="input-field col s12">
+                                              <textarea id="textarea1" class="materialize-textarea"></textarea>
+                                            </div>
+                                          </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+​
+                    <div class="carousel-item row">
+                        <div class ="col s12">
+                            <div class = "card hoverable blue-grey black-text">
+                                <div class ="card-content white-text">
+                                    <span class = "card-title">Deck name</span>
+                                    <p>I am a very simple card. I am good at containing small bits of information.
+                                        I am convenient because I require little markup to use effectively.</p>
+                                </div>
+                                <div class="card-action">
+                                    <!-- <span class="activator"><i class="material-icons right">+</i></span>  -->
+                                    <a class="btn-floating btn-medium waves-effect waves-light light-blue "><i class="material-icons">edit</i></a>
+                                    <a class="btn-floating btn-medium waves-effect waves-light red"><i class="material-icons">delete_forever</i></a>
+                                    <a class="activator btn-floating btn-medium waves-effect waves-light green"><i class="material-icons">note_add</i></a>
+                                </div>
+                                <div class="card-reveal">
+                                    <span class="card-title grey-text text-darken-4">Notes<i class="material-icons right">check</i></span>
+                                    <div class="row">
+                                        <form class="col s12">
+                                          <div class="row">
+                                            <div class="input-field col s12">
+                                              <textarea id="textarea1" class="materialize-textarea"></textarea>
+                                            </div>
+                                          </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>  
+                    </div>
+​
+                    <!-- <div class="carousel-item row">
+                        <div class ="col s12">
+                            <div class = "card hoverable blue-grey black-text">
+                                <div class ="card-content white-text">
+                                    <span class = "card-title">{DeckName}</span>
+                                    <p>{DeckInfo}</p>
+                                </div>
+                                <div class="card-action">
+                                    <a href="#">Edit</a>
+                                    <a href="#">Delete</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div> -->
+​
+​
+                </div>
+​
+            </div>
+​
+​
+        </main>
+​
+        <footer class ="page-footer">
+            <div class = "">
+                <div class = "row">
+                    <div class = "col  offset-10 s2">
+                        <h5 class ="white-text">Contributors</h5>
+                        <ul>
+                            <li> Clayton Abel</li>
+                            <li> Benjamin Gomez</li>
+                            <li> Leland Byrd</li>
+                            <li> Steven Schmidt</li>
+                            <li> Sydney Mercier</li>
+                        </ul>
+                    </div>
+​
+                </div>
+            </div>
+        </footer>
+​
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+        <script src="./carousel_test.js"></script>
+    </body>
+</html>

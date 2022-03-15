@@ -1,0 +1,22 @@
+header{
+    background-color: aqua;
+}
+main{
+    height:650px;
+}
+.container{
+    height:650px;
+}
+​
+div.carousel {
+    margin: 50px;
+    height:500px;
+}
+​
+​
+.card{ 
+    border-radius: 60px; 
+    position: relative !important;
+    right: 20px !important;
+    min-height: 40px;
+}
