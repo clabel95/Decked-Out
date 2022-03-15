@@ -10,6 +10,7 @@ const typeDefs = gql`
     date_created: String
     flashcards: [Flashcard]
   }
+
   type Flashcard {
     _id: ID
     sideA: String!
@@ -19,6 +20,7 @@ const typeDefs = gql`
     deck: [Deck]
     deckTitle: String
   }
+
   type User {
     _id: ID
     username: String
@@ -26,10 +28,12 @@ const typeDefs = gql`
     password: String
     decks: [Deck]
   }
+
   type Auth {
     token: ID
     user: User
   }
+
   type Query {
     decks: [Deck]
     flashcard(_id: ID, sideA: String!, sideB: String!): [Flashcard]
@@ -52,9 +56,3 @@ const typeDefs = gql`
 `;
 
 module.exports = typeDefs;
-
-// Card category/deck
-// id
-// name string
-
-//
