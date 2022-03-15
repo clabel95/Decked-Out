@@ -116,10 +116,4 @@ const resolvers = {
 //     }
 // -----------------------------------------------------------------------
 
-
-
-  //Still functional for the most part
-
-
 module.exports = resolvers;
-

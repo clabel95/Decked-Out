@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Clayton Abel</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" href="./flashcard.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+
+<body>
+
+    <header>
+        <nav class="light-blue lighten-1" role="navigation">
+            <div class="nav-wrapper container"><a id="logo-container" href="#" class="brand-logo">Decked Out</a>
+                <ul class="right">
+                    <li><a href="#">Logout</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="container row flashcard">
+            <div class="col s10">
+                <div class="card">
+                    <div class="card-content">
+                        <div class = "SideA left">
+                            <input type="text" placeholder="input side A text here"/>
+                        </div>
+                        <div class = "SideB right">
+                            <input type="text" placeholder="input side B text here"/>
+                        </div>
+                      
+                    </div>
+                    <div class="card-tabs">
+                      <ul class="tabs tabs-fixed-width">
+                        <li class="tab">Side A</li>
+                        <li class="tab">Side B</li>
+                      </ul>
+                    </div>
+                  </div>
+            </div>
+            <div class = "col s2 button_holder ">
+                <button class="btn next_card waves-effect waves-light #80cbc4 teal lighten-3" type="submit" name="action">Next Card</button>
+                <button class="btn next_card waves-effect waves-light #ffab91 deep-orange lighten-3" type="submit" name="action">Finalize</button>
+            </div>
+        </div>
+    </main>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="./initalize.js"></script>
+</body>
+
+</html>
