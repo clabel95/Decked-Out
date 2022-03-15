@@ -1,0 +1,20 @@
+.SideA{
+   width: 45%;
+}
+
+.SideB{
+    width: 45%;
+}
+.btn{
+    margin: 10px;
+}
+
+.flashcard{
+    height:100%;
+
+}
+
+.button_holder{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
