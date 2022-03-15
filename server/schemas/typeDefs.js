@@ -2,6 +2,7 @@ const { gql } = require('apollo-server-express');
 
 const typeDefs = gql`
   type Deck {
+    _id: ID
     title: String
     category: String
     description: String
@@ -11,11 +12,12 @@ const typeDefs = gql`
   }
   type Flashcard {
     _id: ID
-    sideA: String
-    sideB: String
+    sideA: String!
+    sideB: String!
     noteSideA: String
     noteSideB: String
     deck: [Deck]
+    deckTitle: String
   }
   type User {
     _id: ID
@@ -30,8 +32,8 @@ const typeDefs = gql`
   }
   type Query {
     decks: [Deck]
-    flashcards(category: ID, name: String): [Flashcard]
-    flashcard(_id: ID!): Flashcard
+    flashcard(_id: ID, sideA: String!, sideB: String!): [Flashcard]
+    flashcards: [Flashcard]
     user: User
   }
   type Mutation {
