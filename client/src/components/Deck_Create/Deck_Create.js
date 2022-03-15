@@ -9,20 +9,20 @@ function Deck_Create(props) {
     }
 
     return (
-        <div class="row">
-            <div class="col s12 m6">
-            <div class="card white darken-1">
-                <div class="card-content black-text center-align">
-                <div class="row">
-                    <form class="col s12">
-                        <span class="card-title">
-                            <div class="input-field col s12">
-                                <input id="deck_title" type="text" class="validate">
+        <div className="row">
+            <div className="col s12 m6">
+            <div className="card white darken-1">
+                <div className="card-content black-text center-align">
+                <div className="row">
+                    <form className="col s12">
+                        <span className="card-title">
+                            <div className="input-field col s12">
+                                <input id="deck_title" type="text" className="validate"></input>
                                 <label for="deck_title">Deck Title</label>
                             </div>
                         </span>
 
-                        <div class="input-field col s12">
+                        <div className="input-field col s12">
                             <select>
                             <option value="" disabled selected>Choose category</option>
                             {category_options}
@@ -30,12 +30,12 @@ function Deck_Create(props) {
                             <label>Category</label>
                         </div>
 
-                        <div class="input-field col s12">
-                            <textarea id="textarea1" class="materialize-textarea"></textarea>
+                        <div className="input-field col s12">
+                            <textarea id="textarea1" className="materialize-textarea"></textarea>
                             <label for="textarea1">Description</label>
                         </div>
                         
-                        <button class="btn waves-effect waves-light" type="submit" name="action">Create Cards</button>
+                        <button className="btn waves-effect waves-light" type="submit" name="action">Create Cards</button>
                     </form>
                 </div>
                 </div>
