@@ -5,43 +5,22 @@ const { signToken } = require('../utils/auth');
 const resolvers = {
   Query: {
     deck: async () => {
-              return await Deck.find();
+        return await Deck.find({}).populate('flashcards');
     },
-    flashcard: async (parent, { deck, title }) => {
-      const params = {};
-
-
-      return await Flashcard.find(params).populate('deck');
-    },
-    flashcard: async (parent, { _id }) => {
-      return await Flashcard.findById(_id).populate('deck');
+    flashcard: async (parent, { category }) => {
+      return await Deck.findById(_id);
     },
     user: async (parent, args, context) => {
       if (context.user) {
         const user = await User.findById(context.user._id).populate({
-          path: 'flashcards',
-
-          
-          populate: 'decks'
+          path: 'decks',
+          populate: 'flashcards'
         });
-
         return user;
       }
-
       throw new AuthenticationError('Not logged in');
     },
-    order: async (parent, { _id }, context) => {
-      if (context.user) {
-        const user = await User.findById(context.user._id).populate({
-          path: 'flashcards',
-          populate: 'decks'
-        });
 
-        return user.orders.id(_id);
-      }
-
-      throw new AuthenticationError('Not logged in');
-    },
 
     // If we wanted to include Stripe payment processing
 //--------------------------------------------------------------
