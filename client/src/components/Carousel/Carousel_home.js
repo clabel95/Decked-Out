@@ -8,12 +8,10 @@ function Carousel_Home(props){
     const {loading, data} = useQuery(HOME_DECKS);
     const home_decks = data;
     console.log(home_decks);
-    const deck_desc_array = [];
-    const deck_name_array = [];
 
 
     return(
-        <Carousel_Container decks={decks_array} deck_name={deck_name_array} deck_description={deck_desc_array}  />
+        <Carousel_Container decks={home_decks} />
     );
 
 }

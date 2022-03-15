@@ -14,7 +14,7 @@ function Carousel_Container(props) {
     const carousel_items = [];
 
     for (var i = 0; i < props.decks.length; i += 1) {//Need to figure out what to replace this with so that we can loop through all the decks 
-        carousel_items.push(<Carousel_Item name={props.deck_name[i]} description={props.deck_description[i]} />)
+        carousel_items.push(<Carousel_Item name={props.deck[i].name} description={props.deck[i].description} />)
     };
 
     return (
