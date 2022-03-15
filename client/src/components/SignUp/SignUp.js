@@ -69,7 +69,7 @@ function SignUp(props){
                                 value= {formState.password}
                                 name= "password"
                                 onChange={handleChange}
-                                type="text"
+                                type="password"
                                 />
                             </label>
                             <button className='submit-btn' onClick={()=> props.setTrigger(false)} >Submit</button>

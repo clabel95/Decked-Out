@@ -1,59 +1,73 @@
 [
     {
         "sideA": "when should you set a variable to 'null'",
-        "sideB": "When you expect it to contain a reference to an object. That way, you can explicitly check for the value null to see if the var has been filled with an object reference."  
+        "sideB": "When you expect it to contain a reference to an object. That way, you can explicitly check for the value null to see if the var has been filled with an object reference.",
+        "deckTitle": "Javascript Coding"
     },
     {
         "sideA": "What is a 'unary' operator?",
-        "sideB": "One that only operates on one value, like ++ or -- as in ++var."        
+        "sideB": "One that only operates on one value, like ++ or -- as in ++var.",
+        "deckTitle": "Javascript Coding"        
     },
     {
         "sideA": "How do the constructor, prototype, and instances refer to one another in the prototype pattern?",
-        "sideB": "Constructor has a property called prototype, which is an object. Prototype has a property called constructor that points back at the constructor. Each instance has a property called prototype which points to the prototype object."        
+        "sideB": "Constructor has a property called prototype, which is an object. Prototype has a property called constructor that points back at the constructor. Each instance has a property called prototype which points to the prototype object.",
+        "deckTitle": "Javascript Coding"     
     },
     {
         "sideA": "When is try-catch statement most useful?",
-        "sideB": "For handling an error that is out of your control — for example, when dealing with a library whose code you can't touch."        
+        "sideB": "For handling an error that is out of your control — for example, when dealing with a library whose code you can't touch.",
+        "deckTitle": "Javascript Coding"        
     },
     {
         "sideA": "Is React declarative or imperative?",
-        "sideB": "It's declarative. You say what you want to have happen rather than give step by step instructions."        
+        "sideB": "It's declarative. You say what you want to have happen rather than give step by step instructions.",
+        "deckTitle": "Javascript Coding"     
     },
     {
         "sideA": "Does case matter in naming React components?",
-        "sideB": "Yes, they must be uppercase or React will treat them as DOM tags."        
+        "sideB": "Yes, they must be uppercase or React will treat them as DOM tags.",
+        "deckTitle": "Javascript Coding"        
     },
     {
         "sideA": "Why is the index from an array not a good key for React?",
-        "sideB": "If order changes, performance can suffer."        
+        "sideB": "If order changes, performance can suffer.",
+        "deckTitle": "Javascript Coding"        
     },
     {
         "sideA": "What is function declaration hoisting?",
-        "sideB": "Before code begins running, the javascript engine 'hoists' functions to the top of the execution context. That way, a function can be called even if it doesn't appear in code until later."
+        "sideB": "Before code begins running, the javascript engine 'hoists' functions to the top of the execution context. That way, a function can be called even if it doesn't appear in code until later.",
+        "deckTitle": "Javascript Coding"
     },
     {
         "sideA": "What is the default type for a button element in a form?",
-        "sideB": "Submit."        
+        "sideB": "Submit.",
+        "deckTitle": "Javascript Coding"        
     },
     {
         "sideA": "What is JSON parse() method?",
-        "sideB": "JSON.parse(someJSON) will turn the JSON into a javascript object."
+        "sideB": "JSON.parse(someJSON) will turn the JSON into a javascript object.",
+        "deckTitle": "Javascript Coding"
     },
     {
         "sideA": "What is a 'controlled component'?",
-        "sideB": "An input form where React controls state, e.g. input value = {this.state.value}."        
+        "sideB": "An input form where React controls state, e.g. input value = {this.state.value}.",
+        "deckTitle": "Javascript Coding"        
     },
     {
         "sideA": "Asynchronous setState() syntax?",
-        "sideB": "this.setState((prevState, props) => ({counter: prevState.counter + props.increment}));"
+        "sideB": "this.setState((prevState, props) => ({counter: prevState.counter + props.increment}));",
+        "deckTitle": "Javascript Coding"
         
     },
     {
         "sideA": "What are the string regular expression methods?",
-        "sideB": "match() search(); replace(); split();"
+        "sideB": "match() search(); replace(); split();",
+        "deckTitle": "Javascript Coding"
     },
     {
         "sideA": "How can you see if one node contains another?",
-        "sideB": "someNode.contains( otherNode )."
+        "sideB": "someNode.contains( otherNode ).",
+        "deckTitle": "Javascript Coding"
     }
 ]

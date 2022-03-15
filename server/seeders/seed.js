@@ -16,11 +16,13 @@ db.once('open', async () => {
 
         //CREATE DECKS AND POPULATE USER.decks WITH STARTER DECKS
         //THIS WORKS!
-        for (let i=0; i<deckSeeds.length; i++) {
+        for (let i = 0; i < deckSeeds.length; i++) {
             const deckId = await Deck.create(deckSeeds[i])
             await User.findOneAndUpdate(
-                { $addToSet: {
-                    decks: deckId }
+                {
+                    $addToSet: {
+                        decks: deckId
+                    }
                 },
             )
         }
@@ -28,32 +30,36 @@ db.once('open', async () => {
         const author = await User.find({})
 
         //ADD AUTHOR TO DECK COLLECTION BY LOOPING THROUGH USER SEEDS
-        for (let j=0; j<allDecks.length; j++) {
+        for (let j = 0; j < allDecks.length; j++) {
             // console.log(author[0]._id)
-            await Deck.findOneAndUpdate({_id: allDecks[j]._id}, { author: author[0] }, { runValidators: true } )
+            await Deck.findOneAndUpdate({ _id: allDecks[j]._id }, { author: author[0] }, { runValidators: true })
         }
 
         //MANY FLASHCARDS BELONG TO ONE DECK - FIND BY TITLE
-        for (let i=0; i<pokeSeeds.length; i++) {
+        for (let i = 0; i < pokeSeeds.length; i++) {
             const pokeFlashcard = await Flashcard.create(pokeSeeds[i]);
             await Deck.findOneAndUpdate(
-                //this may return the _id of the flashcard and not user
-                { title: "Pokemon Trivia" }, { $push: {flashcards: pokeFlashcard} }, { runValidators: true } )
+                { title: "Pokemon Trivia" }, { $push: { flashcards: pokeFlashcard } }, { runValidators: true })
         }
-        for (let i=0; i<geoSeeds.length; i++) {
+        for (let i = 0; i < geoSeeds.length; i++) {
             const geoFlashcard = await Flashcard.create(geoSeeds[i]);
             await Deck.findOneAndUpdate(
-                //this may return the _id of the flashcard and not user
-                { title: "Geography Quiz" }, { $push: {flashcards: geoFlashcard} }, { runValidators: true } )
+                { title: "Geography Quiz" }, { $push: { flashcards: geoFlashcard } }, { runValidators: true })
         }
-        for (let i=0; i<codeSeeds.length; i++) {
+        for (let i = 0; i < codeSeeds.length; i++) {
             const codeFlashcard = await Flashcard.create(codeSeeds[i]);
             await Deck.findOneAndUpdate(
                 //this may return the _id of the flashcard and not user
-                { title: "Javascript Coding" }, { $push: {flashcards: codeFlashcard} }, { runValidators: true } )
+                { title: "Javascript Coding" }, { $push: { flashcards: codeFlashcard } }, { runValidators: true })
         }
 
-        //POPULATE DECK FIELD IN FLASHCARD MODEL 
+        //THIS LOGIC WAS IN AN ATTEMPT TO POPULATE EACH FLASHCARD DYNAMICALLY WITH THE DECK IT BELONGS TO
+        //const pokeDeck = await Deck.findOne({ title: "Pokemon Trivia" })
+        //console.log(pokeDeck);
+        // const deck1 = Flashcard.updateMany( {deck: ''}, {$addToSet: {deck: 'Pokemon Trivia'} }, { runValidators: true } )
+        // console.log(deck1)
+        
+
 
     } catch (err) {
         console.log(err);
