@@ -1,0 +1,27 @@
+.Study{
+    display:flex;
+    flex-direction: column;
+}
+
+
+/* #SideA{
+    display:flex;
+    flex-direction: column;
+}
+*/
+/* .SideB_Study{
+    display:none;
+}  */
+.btn{
+    margin: 10px;
+}
+
+.flashcard{
+    height:100%;
+
+}
+
+.button_holder{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
