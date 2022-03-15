@@ -10,15 +10,6 @@ const resolvers = {
     flashcard: async (parent, { deck, title }) => {
       const params = {};
 
-      if (deck) {
-        params.deck = deck;
-      }
-
-      if (title) {
-        params.title = {
-          $regex: title
-        };
-      }
 
       return await Flashcard.find(params).populate('deck');
     },
@@ -29,6 +20,8 @@ const resolvers = {
       if (context.user) {
         const user = await User.findById(context.user._id).populate({
           path: 'flashcards',
+
+          
           populate: 'decks'
         });
 
