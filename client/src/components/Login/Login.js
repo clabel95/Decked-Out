@@ -1,10 +1,9 @@
 import React, { useState } from 'react';
 import './Login.css';
-
 import { Link } from 'react-router-dom';
 
 import { useMutation } from '@apollo/client';
-import { ADD_USER } from '../../utils/mutations';
+import { LOGIN_USER } from '../../utils/mutations';
 
 import Auth from '../../utils/auth'
 
@@ -13,7 +12,7 @@ function Login(props) {
         username: '',
         password: '',
     });
-    const [addUser, { error, data }] = useMutation(ADD_USER);
+    const [loginUser, { error, data }] = useMutation(LOGIN_USER);
 
     const handleChange = (event) => {
         const { name, value } = event.target;
@@ -29,15 +28,21 @@ function Login(props) {
         console.log(`this is the state of the form ${formState.username}`)
 
         try {
-            const { data } = await addUser({
+            const { data } = await loginUser({
                 variables: { ...formState },
             });
             //change Auth.login for the SignUp .js??
+            console.log(data);
             Auth.login(data.login.token);
         } catch (err) {
             console.log(err);
         }
-    }
+        //clear form values after submit button
+        setFormState({
+            username: '',
+            password: '',
+        });
+    };
     return (props.trigger) ? (
         <div className="loginPopup">
             <div className='loginPopup-inner'>
@@ -50,6 +55,7 @@ function Login(props) {
                             name="username"
                             onChange={handleChange}
                             type="text"
+                            // ref={this.textInput}
                         />
                         <br></br>
                         Password:
@@ -59,8 +65,15 @@ function Login(props) {
                             onChange={handleChange}
                             type="password"
                         />
+                        <br></br>
+                        <Link to='/home'>
+                            <button 
+                                type='submit' 
+                                className='login-btn'  >Enter</button>
+                        </Link>
+                        {/* { props.children } */}
                     </label>
-                    <button className='login-btn' onClick={() => props.setTrigger(false)} >Enter</button>
+                    {/* <button type='submit' className='login-btn'  >Enter</button> */}
                     {/* { props.children } */}
                 </form>
 
@@ -72,3 +85,5 @@ function Login(props) {
 
 }
 export default Login;
+
+// onClick={() => props.setTrigger(false)}

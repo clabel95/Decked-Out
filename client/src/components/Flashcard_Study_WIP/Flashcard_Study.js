@@ -1,13 +1,12 @@
 import React from 'react';
 import "./Flashcard_Study.css";
-import Card_Contents from './Card_Contents';
+
 
 
 function FlipCard() {
   document.getElementById("SideB").classList.toggle("hide");
   document.getElementById("SideA").classList.toggle("hide");
 }
-
 
 
 //decrements the card index value which will change the contents of the displayed flashcard.
@@ -44,12 +43,12 @@ return (
                 <div class="card">
                     <div class="card-content">
                         <div class="Study center-align" id = "SideA">
-                            <Card_Contents contents={props.flashcards[card_index].sideA}/>
+                            <div>{props.flashcards[card_index].sideA}</div>
                             <a class="waves-effect waves-light btn flow-text" id="SideA_btn" onClick={() => FlipCard()}><i class="material-icons">autorenew</i></a>
 
                         </div>
                         <div class="Study center-align hide" id = "SideB">
-                            <Card_Contents contents={props.flashcards[card_index].sideB}/>  
+                            <div>{props.flashcards[card_index].sideB}</div> 
                             <a class="waves-effect waves-light btn flow-text" id="SideB_btn" onClick={() => FlipCard()}><i class="material-icons ">autorenew</i></a>
                         </div>
                       
