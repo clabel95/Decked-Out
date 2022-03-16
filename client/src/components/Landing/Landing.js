@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 import highlighterLogin from '../Assets/highlighterLogin.png';
 import highlighterSignUp from '../Assets/highlighterSignUp.png';
 
