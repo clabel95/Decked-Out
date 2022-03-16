@@ -10,10 +10,14 @@ function Carousel_Home(){
 
 
     return(
-        <>
-        <h2>carousel home </h2>
+        <div>
+
+        {/* {loading ? (<div>Loading...</div>) : (
+                <h2>{data.decks[0].category}</h2>
+                )} */}
+                
         {/* <Carousel_Container decks={home_decks} /> */}
-        </>
+        </div>
     );
 
 }

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './Login.css';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 import { useMutation } from '@apollo/client';
 import { LOGIN_USER } from '../../utils/mutations';
@@ -12,6 +12,7 @@ function Login(props) {
         username: '',
         password: '',
     });
+    // let navigate = useNavigate()
     const [loginUser, { error, data }] = useMutation(LOGIN_USER);
 
     const handleChange = (event) => {
@@ -34,6 +35,7 @@ function Login(props) {
             //change Auth.login for the SignUp .js??
             console.log(data);
             Auth.login(data.login.token);
+            // navigate('/home')
         } catch (err) {
             console.log(err);
         }
@@ -66,11 +68,11 @@ function Login(props) {
                             type="password"
                         />
                         <br></br>
-                        <Link to='/home'>
+                        {/* <Link to='/home'> */}
                             <button 
                                 type='submit' 
                                 className='login-btn'  >Enter</button>
-                        </Link>
+                        {/* </Link> */}
                         {/* { props.children } */}
                     </label>
                     {/* <button type='submit' className='login-btn'  >Enter</button> */}
