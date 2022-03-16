@@ -17,7 +17,6 @@ const typeDefs = gql`
     sideB: String!
     noteSideA: String
     noteSideB: String
-    deck: [Deck]
     deckTitle: String
   }
 

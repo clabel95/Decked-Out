@@ -1,11 +1,13 @@
 import {gql} from '@apollo/client';
 export const HOME_DECKS = gql`
-query deck{
+query decks{
     title
-    category
-    description
-    date_created
-    author
-    flashcards
 }
 `
+
+export const FLASHCARDS = gql`
+query flashcards{
+    flashcards{
+        sideA
+    }
+}`

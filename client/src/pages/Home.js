@@ -12,6 +12,7 @@ const Home = () => {
     <main>
       <div className="flex-row justify-center">
         <div>
+          <h2>Hello</h2>
           <Carousel_Home/>
           {/* <SearchBar/> */}
         </div>
