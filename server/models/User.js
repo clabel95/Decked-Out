@@ -25,7 +25,12 @@ const userSchema = new Schema(
                 ref: 'deck',
             }
         ],
-    }
+    },
+    // {
+    //     toJSON: {
+    //       virtuals: true,
+    //     },
+    // }
 );
 
 userSchema.pre('save', async function (next) {

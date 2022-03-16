@@ -1,11 +1,13 @@
 import React, { useState } from 'react';
-import './SignUp.css';
-// 'use strict';
-
-
-import { Link } from 'react-router-dom';
-
 import { useMutation } from '@apollo/client';
+
+import './SignUp.css';
+
+
+
+// import { Link } from 'react-router-dom';
+
+// import { useMutation } from '@apollo/client';
 import { ADD_USER } from '../../utils/mutations';
 
 import Auth from '../../utils/auth'
@@ -72,7 +74,7 @@ function SignUp(props){
                                 type="password"
                                 />
                             </label>
-                            <button className='submit-btn' onClick={()=> props.setTrigger(false)} >Submit</button>
+                            <button type="submit" className='submit-btn'>Submit</button>
                             {/* { props.children } */}
                         </form>
                 
@@ -86,7 +88,7 @@ function SignUp(props){
 export default SignUp;
 
 
-
+// onClick={()=> props.setTrigger(false)} 
 
 
 

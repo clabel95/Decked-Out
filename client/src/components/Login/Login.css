@@ -1,13 +1,13 @@
-.loginPopup{
-    position: relative;
-    /* height: 398px;
+.loginPopup{ 
+    /*position: relative;
+     height: 398px;
     width: 628px;
     min-width: 500px; */
-    /* background-image: url('../Assets/postcard.png');
-    background-size: cover; */
+   
+     
     display: flex;
     box-shadow: 2px;
-}
+} 
 
 .loginPopup-inner{
     position: relative;
@@ -30,15 +30,19 @@
     font-weight: 515;
     font-size: 31px;
     position: relative;
-    bottom: 55px;
+    bottom: 32px;
     text-decoration: underline solid black 1px;
+}
+
+input {
+    background-color: white ;
 }
 
 .login-btn{
     font-family: 'Amatic SC', cursive;
     position: relative;
-    right: 189px;
-    bottom: -60px;
+    
+    
     text-decoration: underline dotted black 2px;
     /* text-shadow: 3px 3px rgb(5, 225, 141); */
 }
