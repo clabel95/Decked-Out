@@ -1,6 +1,5 @@
 import React from 'react';
 import Carousel_Container from './Carousel_Container';
-import {Deck, Flashcard, User} from '../../../../server/models';
 import {USER_DECKS} from '../../utils/queries'
 import { useQuery } from '@apollo/client';
 
