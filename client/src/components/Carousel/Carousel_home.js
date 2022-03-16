@@ -4,7 +4,7 @@ import {Deck, Flashcard, User} from '../../../../server/models';
 import {HOME_DECKS} from '../../utils/queries'
 import { useQuery } from '@apollo/client';
 
-function Carousel_Home(props){
+function Carousel_Home(){
     const {loading, data} = useQuery(HOME_DECKS);
     const home_decks = data;
     console.log(home_decks);
