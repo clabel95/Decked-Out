@@ -1,5 +1,5 @@
 import React from "react";
-import Landing from "./components/Landing/Landing";
+import Landing from "./components/Landing/index";
 // import Carousel_Home from "./components/Carousel";
 import {
   ApolloClient,
@@ -11,7 +11,7 @@ import { setContext } from '@apollo/client/link/context';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 const httpLink = createHttpLink({
-  uri: '/graphql',
+  uri: 'http://localhost:3001/graphql',
 });
 
 

@@ -7,10 +7,10 @@ import './SignUp.css';
 
 // import { Link } from 'react-router-dom';
 
-// import { useMutation } from '@apollo/client';
+
 import { ADD_USER } from '../../utils/mutations';
 
-import Auth from '../../utils/auth'
+import Auth from '../../utils/auth';
 
 function SignUp(props){
     const [formState, setFormState] = useState({

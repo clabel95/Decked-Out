@@ -2,6 +2,7 @@
   "name": "client",
   "version": "0.1.0",
   "private": true,
+  "proxy": "http://localhost:3000",
   "dependencies": {
     "@apollo/client": "^3.5.10",
     "@testing-library/jest-dom": "^5.16.2",
@@ -10,6 +11,7 @@
     "concurrently": "^7.0.0",
     "css-loader": "^6.7.1",
     "graphql": "^16.3.0",
+    "http-proxy-middleware": "^2.0.4",
     "jwt-decode": "^3.1.2",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",

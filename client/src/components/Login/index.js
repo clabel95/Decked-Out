@@ -4,7 +4,7 @@ import './Login.css';
 // import { Link } from 'react-router-dom';
 
 import { useMutation } from '@apollo/client';
-import { ADD_USER } from '../../utils/mutations';
+import { LOGIN_USER } from '../../utils/mutations';
 
 import Auth from '../../utils/auth'
 
@@ -13,7 +13,7 @@ function Login(props) {
         username: '',
         password: '',
     });
-    const [addUser, { error, data }] = useMutation(ADD_USER);
+    const [login, { error, data }] = useMutation(LOGIN_USER);
 
     const handleChange = (event) => {
         const { name, value } = event.target;
@@ -29,7 +29,7 @@ function Login(props) {
         console.log(`this is the state of the form ${formState.username}`)
 
         try {
-            const { data } = await addUser({
+            const { data } = await login({
                 variables: { ...formState },
             });
             //change Auth.login for the SignUp .js??
