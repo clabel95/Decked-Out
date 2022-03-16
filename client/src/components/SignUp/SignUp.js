@@ -5,7 +5,7 @@ import './SignUp.css';
 
 
 
-// import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 // import { useMutation } from '@apollo/client';
 import { ADD_USER } from '../../utils/mutations';
@@ -74,7 +74,10 @@ function SignUp(props){
                                 type="password"
                                 />
                             </label>
-                            <button type="submit" className='submit-btn'>Submit</button>
+                            <Link to='/home'>
+                            <button type="submit" className='submit-btn'>Submit</button> 
+                            </Link>
+                            
                             {/* { props.children } */}
                         </form>
                 

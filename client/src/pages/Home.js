@@ -4,7 +4,7 @@ import React from 'react';
 // import Footer from "../components/Footer_WIP/Footer";
 // import NavBar from "../components/NavBar/NavBar";
 import Carousel_Home from "../components/Carousel_Home/index";
-import SearchBar from "../components/SearchBar/index";
+// import SearchBar from "../components/SearchBar/index";
 
 
 const Home = () => {
@@ -13,7 +13,7 @@ const Home = () => {
       <div className="flex-row justify-center">
         <div>
           <Carousel_Home/>
-          <SearchBar/>
+          {/* <SearchBar/> */}
         </div>
       </div>
     </main>
