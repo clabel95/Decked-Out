@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import './Login.css';
-
-// import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 import { useMutation } from '@apollo/client';
 import { LOGIN_USER } from '../../utils/mutations';
@@ -13,7 +12,7 @@ function Login(props) {
         username: '',
         password: '',
     });
-    const [login, { error, data }] = useMutation(LOGIN_USER);
+    const [loginUser, { error, data }] = useMutation(LOGIN_USER);
 
     const handleChange = (event) => {
         const { name, value } = event.target;
@@ -29,7 +28,7 @@ function Login(props) {
         console.log(`this is the state of the form ${formState.username}`)
 
         try {
-            const { data } = await login({
+            const { data } = await loginUser({
                 variables: { ...formState },
             });
             //change Auth.login for the SignUp .js??
@@ -67,9 +66,11 @@ function Login(props) {
                             type="password"
                         />
                         <br></br>
-                        <button 
-                            type='submit' 
-                            className='login-btn'  >Enter</button>
+                        <Link to='/home'>
+                            <button 
+                                type='submit' 
+                                className='login-btn'  >Enter</button>
+                        </Link>
                         {/* { props.children } */}
                     </label>
                     {/* <button type='submit' className='login-btn'  >Enter</button> */}
