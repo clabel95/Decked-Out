@@ -8,7 +8,7 @@ function Search_Bar(props) {
     // are we going to have set categories and just hard code the values into the options below?
     // or are we going to dynamicly add options to the drop down menu?
     const options = []
-    for (var i = 0; i < catagories.lenght; i +=1){
+    for (var i = 0; i < categories.lenght; i +=1){
         options.push(<option value={i}>{props.categories[i]}</option>)
     }
 
