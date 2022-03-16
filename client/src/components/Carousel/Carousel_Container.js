@@ -1,7 +1,7 @@
 import React from 'react';
 import "./Carousel.css";
 import "./initalize.js";
-import Carousel_Item from '../Carousel_Item/index';
+import Carousel_Item from './Carousel_Item';
 
 
 
