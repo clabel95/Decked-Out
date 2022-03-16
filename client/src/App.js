@@ -1,6 +1,7 @@
 import React from "react";
 import Landing from "./components/Landing/Landing";
 import Home from "./pages/Home";
+
 // import Carousel_Home from "./components/Carousel";
 import {
   ApolloClient,

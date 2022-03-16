@@ -11,7 +11,10 @@ function Carousel_Home(props){
 
 
     return(
+        <>
+        <h2>carousel home </h2>
         <Carousel_Container decks={home_decks} />
+        </>
     );
 
 }
