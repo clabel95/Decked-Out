@@ -69,8 +69,8 @@ const resolvers = {
   },
   // USER IS BEING FOUND BY EMAIL (NO REQUEST FOR USERNAME CURRENTLY BEING USED) 
   // this doesn't exit yet - PASSWORD MUST BE LONGER THAN 8 CHARACTERS TO WORKS
-  login: async (parent, { email, password }) => {
-    const user = await User.findOne({ email });
+  login: async (parent, { username, password }) => {
+    const user = await User.findOne({ username });
 
     if (!user) {
       throw new AuthenticationError('Incorrect credentials');
