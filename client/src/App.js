@@ -1,6 +1,7 @@
 import React from "react";
 import Landing from "./components/Landing/Landing";
-import Home from './pages/Home'
+import Home from "./pages/Home";
+
 // import Carousel_Home from "./components/Carousel";
 import {
   ApolloClient,
@@ -43,8 +44,8 @@ function App() {
             path="/"
             element={<Landing />}
           />
-             <Route
-            path="/home"
+          <Route
+            path='/home'
             element={<Home />}
           />
           
