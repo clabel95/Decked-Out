@@ -74,9 +74,9 @@ function SignUp(props){
                                 type="password"
                                 />
                             </label>
-                            <Link to='/home'>
+                            {/* <Link to='/home'> */}
                             <button type="submit" className='submit-btn'>Submit</button> 
-                            </Link>
+                            {/* </Link> */}
                             
                             {/* { props.children } */}
                         </form>
