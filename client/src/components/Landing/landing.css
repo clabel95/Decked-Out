@@ -2,7 +2,7 @@ body {
     position: relative;
     display: flex;
     flex-direction: column;
-    margin-top: -40px;
+    
 }
 
 #mainBackground {
@@ -23,26 +23,27 @@ body {
     font-size: 145px;
     color: #000000;
     position: relative;
-    top: 5px;
+    top: 22px;
 }
 
 #highlightLogin{
     display: flex;
     justify-content: center;
     height: 360px;
-    margin-top: -83px;
+    margin-top: -13px;
     margin-left: 270px;
 }
 
 #highlit{
     opacity: 0.80;
+    width: auto;
 }
 
 #login{
     height: 108px;
     width: auto;
     position: relative;
-    top: 136px;
+    top: 116px;
     right: 312px;
     font-family: 'Fredericka the Great', cursive;
     font-style: normal;
