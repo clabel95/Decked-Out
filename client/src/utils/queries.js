@@ -1,7 +1,12 @@
 import {gql} from '@apollo/client';
 export const HOME_DECKS = gql`
 query decks{
-    title
+    decks{
+      _id
+      title
+      category
+      description
+    }
 }
 `
 

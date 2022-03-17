@@ -10,7 +10,7 @@ function FlipCard() {
 
 
 //decrements the card index value which will change the contents of the displayed flashcard.
-function Prev_Card(total_cards){
+function Prev_Card(total_cards,card_index){
     if (card_index != 0){
         card_index -=1;
     }else{
@@ -37,7 +37,7 @@ let card_index = 0; //index that will let us loop through all the cards.
 return (
 <div class="container row flashcard_study valign-wrapper">
             <div class = "col s2 button_holder right-align">
-                <a class="waves-effect waves-light btn flow-text valign-wrapper" onClick={() => Prev_Card(props.flashcards.length)}><i class="material-icons">arrow_back</i></a>
+                <a class="waves-effect waves-light btn flow-text valign-wrapper" onClick={() => Prev_Card(props.flashcards.length, card_index)}><i class="material-icons">arrow_back</i></a>
             </div>
             <div class="col s8">
                 <div class="card">
@@ -56,7 +56,7 @@ return (
                   </div>
             </div>
             <div class = "col s2 button_holder">
-                <a class="waves-effect waves-light btn flow-text valign-wrapper" onClick={() => Next_Card(props.flashcards.length)}><i class="material-icons">arrow_forward</i></a>
+                <a class="waves-effect waves-light btn flow-text valign-wrapper" onClick={() => Next_Card(props.flashcards.length, card_index)}><i class="material-icons">arrow_forward</i></a>
             </div>
         </div>
 )
