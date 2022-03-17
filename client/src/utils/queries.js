@@ -11,6 +11,10 @@ query decks{
 
 }
 `
+export const USER_DECKS = gql`
+query decks{
+    author
+}`
 
 export const FLASHCARDS = gql`
 query flashcards{

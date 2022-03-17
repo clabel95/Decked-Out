@@ -4,9 +4,8 @@
   float: left;
   width: 25%;
   align-items: center;
-  position: relative;
+  position: fixed;
   transform: translateX(-20%);
-  position: relative;
 }
 
 
