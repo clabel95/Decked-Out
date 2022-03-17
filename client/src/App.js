@@ -11,7 +11,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 // import NewCard from "./pages/NewCard"
 // import NewDeck from "./pages/NewDeck"
-// import Study from "./pages/Study"
+import Study from "./pages/Study"
 // import User from "./pages/User"
 import Landing from "./components/Landing/Landing";
 import Home from "./pages/Home";
@@ -52,6 +52,10 @@ function App() {
             path='/home'
             element={<Home />}
           />
+          <Route
+            path='home/study'
+            element={<Study />}
+          />
 
 
 
@@ -69,10 +73,6 @@ export default App;
 
           // <Route
           //   path='/user'
-          //   element={<Home />}
-          // />
-          // <Route
-          //   path='/study'
           //   element={<Home />}
           // />
           // <Route
