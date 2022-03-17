@@ -67,3 +67,11 @@ input {
 input[type=text]:not(.browser-default) {
     border-bottom: 2px solid rgb(0, 0, 0);
 }
+#xbut {
+    background: transparent;
+    border: 0px;
+    height: 5%;
+    top: -10px;
+    left: 20px;
+    position: absolute;
+  }
