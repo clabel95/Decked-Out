@@ -1,5 +1,5 @@
 import React from 'react';
-import Carousel_Container from './Carousel_Container';
+import Carousel_Container from '../Carousel_Container/index';
 import {USER_DECKS} from '../../utils/queries'
 import { useQuery } from '@apollo/client';
 
