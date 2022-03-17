@@ -1,17 +1,22 @@
-import React from 'react';
-import "./initalize.js";
+import React, { Component } from 'react';
+import M from "materialize-css";
 
 
-
-function Search_Bar(props) {
+document.addEventListener('DOMContentLoaded', function () {
+    var elems = document.querySelectorAll('.sidenav');
+    var instances = M.Sidenav.init(elems, { edge: "right" });
+});
+class Search_Bar extends Component {
+    componentDidMount() {
+        const opt = {
+            edge: "right"
+        };
+        M.Search_Bar.init(this.Search_Bar, opt);
+    }
     // not sure how we want to set this up.
     // are we going to have set categories and just hard code the values into the options below?
     // or are we going to dynamicly add options to the drop down menu?
-    const options = []
-    for (var i = 0; i < categories.lenght; i +=1){
-        options.push(<option value={i}>{props.categories[i]}</option>)
-    }
-
+    render(){
     return (
         <div>
             <ul id="slide-out" class="sidenav">
@@ -32,7 +37,6 @@ function Search_Bar(props) {
                                 <option value="1">Sports</option>
                                 <option value="2">Pokemon</option>
                                 <option value="3">Games</option>
-                                {options}
                             </select>
                         </div>
                     </div>
@@ -50,5 +54,5 @@ function Search_Bar(props) {
         </div>
     );
 }
-
+}
 export default Search_Bar;
