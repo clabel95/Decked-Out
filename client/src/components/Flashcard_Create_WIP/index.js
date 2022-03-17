@@ -1,7 +1,9 @@
-import React from 'react';
-import "./Flashcard_Create.css";
+import React, { useState } from 'react';
+import Navbar from '../../components/Navbar'
+//import "./Flashcard_Create.css";
+//import SearchBar from '../../components/SearchBar';
 import { useMutation } from '@apollo/client';
-import { ADD_FLASHCARD, LOGIN_USER } from '../../utils/mutations';
+import { ADD_FLASHCARD } from '../../utils/mutations';
 
 //still need to add the functionality to the next card and finalize deck buttons in a flashcard.js file. 
 
@@ -14,11 +16,12 @@ import { ADD_FLASHCARD, LOGIN_USER } from '../../utils/mutations';
 
 
 function Flashcard_Create() {
-    [formState, setFormState] = useState({
+    const categories = ["Sports", "Pokemon", "Games"];
+    const [formState, setFormState] = useState({
         sideA: '',
         sideB: '',
     });
-    const [addFlashCard, { error, data }] = useMutation(ADD_FLASHCARD)
+    const [addFlashCard, { error }] = useMutation(ADD_FLASHCARD)
 
     const handleChange = (event) => {
         const { name, value } = event.target;
@@ -41,52 +44,57 @@ function Flashcard_Create() {
             console.log(err);
         }
     }
-        return (
-            <div class="container row flashcard">
+    return (
+        <>
+            <h2>Decked-Out</h2>
+            <Navbar />
+            <div className="container row flashcard">
                 <form onSubmit={handleFormSubmit}>
-                    <div class="col s10">
-                        <div class="card">
-                            <div class="card-content">
-                                <div class="SideA left">
-                                    <label>SideA</label>
-                                    <input 
-                                    id="SideA"
-                                    value= {formState.sideA} 
-                                    name="sideA"
-                                    onChange={handleChange}
-                                    type="text" 
-                                    placeholder="input side A text here" 
+                    <div className="col s10">
+                        <div className="card">
+                            <div className="card-content">
+                                <div className="SideA left">
+                                    <input
+                                        id="SideA"
+                                        value={formState.sideA}
+                                        name="sideA"
+                                        onChange={handleChange}
+                                        type="text"
+                                        placeholder="input side A text here"
                                     />
                                 </div>
-                                <div class="SideB right">
-                                    <input 
-                                    id="SideB"
-                                    value= {formState.sideB} 
-                                    name="sideB"
-                                    onChange={handleChange}
-                                    type="text" 
-                                    placeholder="input side B text here" 
+                                <div className="SideB right">
+                                    <input
+                                        id="SideB"
+                                        value={formState.sideB}
+                                        name="sideB"
+                                        onChange={handleChange}
+                                        type="text"
+                                        placeholder="input side B text here"
                                     />
                                 </div>
 
                             </div>
-                            <div class="card-tabs">
-                                <ul class="tabs tabs-fixed-width">
-                                    <li class="tab">Side A</li>
-                                    <li class="tab">Side B</li>
+                            <div className="card-tabs">
+                                <ul className="tabs tabs-fixed-width">
+                                    <li className="tab">Side A</li>
+                                    <li className="tab">Side B</li>
                                 </ul>
                             </div>
                         </div>
                     </div>
-                    <div class="col s2 button_holder ">
-                        <button class="btn next_card waves-effect waves-light #80cbc4 teal lighten-3" id="new_card" type="submit" name="action">Next Card</button>
-                        <button class="btn next_card waves-effect waves-light #ffab91 deep-orange lighten-3" id="finalize_deck" type="submit" name="action">Finalize</button>
+                    <div className="col s2 button_holder ">
+                        <button className="btn next_card waves-effect waves-light #80cbc4 teal lighten-3" id="new_card" type="submit" name="action">Next Card</button>
+                        <button className="btn next_card waves-effect waves-light #ffab91 deep-orange lighten-3" id="finalize_deck" type="submit" name="action">Finalize</button>
                     </div>
                 </form>
+                
             </div>
+            {/* <SearchBar categories={categories}/> */}
+        </>
 
 
-        );
-    }
+    );
+}
 
-    export default Flashcard_Create;
+export default Flashcard_Create;
