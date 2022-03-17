@@ -44,9 +44,7 @@ const typeDefs = gql`
     addDeck(title: String!, category: String!, description: String, date_created: String): Deck
     addFlashCard(
       sideA: String!
-      sideB: String!
-      noteSideA: String 
-      noteSideB: String): Flashcard
+      sideB: String!): Flashcard
     updateFlashCard(sideA: String!, sideB: String!, noteSideA: String, noteSideB: String): Flashcard
     updateUser(username: String, email: String, password: String): User
     updateDeck(title: String!, category: String!, description: String): Deck

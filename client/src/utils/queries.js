@@ -15,8 +15,15 @@ query decks{
 }
 `
 export const USER_DECKS = gql`
-query decks{
-    author
+query userDecks{
+    decks{
+        _id
+        title
+        category
+        description
+        author
+    }
+
 }`
 
 

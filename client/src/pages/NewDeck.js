@@ -4,6 +4,7 @@ import Navbar from '../components/Navbar'
 // import Footer from "../components/Footer_WIP/Footer";
 import DeckCreate from '../components/DeckCreate/index';
 import SearchBar from '../components/SearchBar/index';
+import { Link } from 'react-router-dom';
 
 
 
@@ -19,6 +20,8 @@ const NewDeck = () => {
             <h2>Decked-Out</h2>
 
             <DeckCreate categories={categories}/>
+            <Link to='/addFlashCard'>createFlashcard</Link>
+            
             
           </div>
           
