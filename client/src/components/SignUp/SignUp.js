@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useMutation } from '@apollo/client';
-
+import xicon from '../Assets/xicon.png'
 import './SignUp.css';
 
 import { Link } from 'react-router-dom';
@@ -46,6 +46,10 @@ function SignUp(props){
         <div className="signUpPopUp">
             <div className='popup-inner'>
                 <h2 id= "signUpHead">Sign Up</h2>
+                 <button id='xbut' type="button" 
+                    onClick={() => props.trigger=props.setTrigger(false)}>
+                    <img src={xicon}></img>
+                </button>
                 <form onSubmit={handleFormSubmit} >
                             <label id="formSignUp">
                                 Email:
