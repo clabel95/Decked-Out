@@ -24,7 +24,9 @@ function Carousel_Item(props) {
                     
                     <div className="card-action">
                         <a className="moveIcon btn-floating btn waves-effect waves-light light-blue "><Link to='Study'><i className="material-icons">menu_book</i></Link></a>
+                        <div class="divider"/>
                         <a className="btn-floating btn- waves-effect waves-light red"><i className="material-icons">delete_forever</i></a>
+                        <div class="divider"/>
                         <a className="activator btn-floating btn- waves-effect waves-light green"><i className="material-icons">note_add</i></a>
                     </div>
                     <div className="card-reveal">
