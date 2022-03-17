@@ -17,7 +17,7 @@ const Home = () => {
         <div>
 
 
-          <h2>Deck Out</h2>
+          <h2>Decked-Out</h2>
 
           <Carousel_Home/>
           <SearchBar categories={categories}/>
