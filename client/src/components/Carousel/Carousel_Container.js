@@ -4,11 +4,6 @@ import "./initalize.js";
 import Carousel_Item from './Carousel_Item';
 
 
-
-
-
-
-
 function Carousel_Container(props) {
     //Make a function to parse out all the different Carousel items and then add them to the return statment.
     const carousel_items = [];

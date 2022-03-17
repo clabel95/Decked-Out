@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import "./initalize.js";
 
 import M from "materialize-css";
+import "./sideNav.css"
 
 class SearchBar extends Component {
     componentDidMount() {
@@ -41,13 +42,13 @@ class SearchBar extends Component {
                     </li>
                     <li>
                         <div className="row">
-                            <button className="btn waves-effect waves-light col s8 offset-s2" type="submit" name="action">Search
+                            <button className="sideSearch btn waves-effect waves-light col s8 offset-s2" type="submit" name="action">Search
                                 <i className="material-icons right">send</i>
                             </button>
                         </div>
                     </li>
                 </ul>
-                <a href="#" data-target="slide-out" className="sidenav-trigger right"><i className="material-icons">search</i></a>
+                <a href="#" data-target="slide-out" className="sidenav-trigger right"><i className="side material-icons">search</i></a>
                 <script src="./initalize.js"></script>
             </div>
         );
