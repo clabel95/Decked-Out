@@ -3,7 +3,7 @@ import React from "react";
 import { useMutation } from "@apollo/client";
 import { useQuery } from "@apollo/client";
 
-const Deck_Create = () => {
+const DeckCreate = () => {
     
 
 
@@ -50,4 +50,4 @@ const Deck_Create = () => {
     )
 }
 
-export default Deck_Create;
+export default DeckCreate;

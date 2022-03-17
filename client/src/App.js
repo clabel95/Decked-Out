@@ -15,7 +15,7 @@ import Study from "./pages/Study"
 import User from "./pages/User"
 import Landing from "./components/Landing/Landing";
 import Home from "./pages/Home";
-import Deck_Create from "./components/Deck_Create";
+import DeckCreate from "./components/Deck_Create";
 
 const httpLink = createHttpLink({
   uri: 'http://localhost:3001/graphql',
@@ -63,7 +63,7 @@ function App() {
           />
           <Route
             path='home/deck_create'
-            element={<Deck_Create />}
+            element={<DeckCreate />}
           />
 
 

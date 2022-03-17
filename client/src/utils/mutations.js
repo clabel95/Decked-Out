@@ -23,3 +23,22 @@ export const  ADD_USER = gql`
         }
     }
 `;
+
+export const ADD_FLASHCARD = gql`
+    mutation addFlashcard($sideA: String!, $sideB: String!) {
+        addFlashCard(sideA: $sideA, sideB: $sideB) {
+            user {
+                _id
+                username
+            }
+            deck{
+                _id
+            }
+            flashcard {
+                sideA
+                sideB
+                noteSideA
+                noteSideB
+            }
+        }
+    }`
