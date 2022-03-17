@@ -19,7 +19,7 @@ class Navbar extends React.Component {
                 </Link>
               </li>
               <li className="marker">
-                <Link to="carousel_user">
+                <Link to="user">
                   <img src = {navprofile} nav-item = 'true'></img>
                 </Link>
               </li>
