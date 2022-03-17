@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 // import "./Carousel.css";
 import Carousel_Item from '../Carousel_Item/index';
 
+
 import M from "materialize-css";
 
 class Carousel extends Component {
@@ -32,9 +33,11 @@ class Carousel extends Component {
         return (
             <div className="container">
                 <div ref={Carousel => { this.Carousel = Carousel; }} className="carousel row">
-                    {(this.props.decks.decks).map((title,description) => (
-                            <Carousel_Item name={title} description={description} />
+                    {(this.props.decks.decks).map((title,description, i) => (
+                            <Carousel_Item key={ i} name={title} description={description} />
+                            
                     ))}
+                    
                 </div>
             </div>
 

@@ -39,13 +39,13 @@ const resolvers = {
     return { token, user };
   },
   //adding a deck from the navbar on the side = on the plus sign on page 6 of wireframe, component is deck_create, associated with next button
-  addDeck: async (parent, args) => {
-      const deck = await Deck.create(args);
+  addDeck: async (parent, {args}) => {
+      const deck = await Deck.create({args});
       return deck;
   },
   // this will be the 'plus' on the same 'next' page from the same component as the previous one
-  addFlashCard: async (parent, args) => {
-      const flashcard = await Flashcard.create(args);
+  addFlashCard: async (parent, {sideA, sideB}) => {
+      const flashcard = await Flashcard.create({sideA, sideB});
       return flashcard;
   },
   // NOT NECESSARILY FUNCTIONING IN THE CURRENT SETUP - OPTIONAL

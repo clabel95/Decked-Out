@@ -1,6 +1,8 @@
 
 import React from 'react';
-// import "../carousel_item.css";
+import "./carousel_item.css";
+import { Link } from 'react-router-dom';
+
 
 function Carousel_Item(props) {
     console.log(props.name)
@@ -10,16 +12,22 @@ function Carousel_Item(props) {
     //console.log(props.name)
     return (
         <div className="carousel-item row">
-            <div className="col s12">
-                <div className="card hoverable blue-grey black-text">
-                    <div className="card-content white-text">
+            {/* ben change index below */}
+            <div className="index card hoverable">
+                {/* <div className="card hoverable"> */}
+                
+                    <div className=" header card-content white-text">
                         <span className="card-title">{props.name.title}</span>
                         <p>{props.name.description}</p>
+                        
                     </div>
+                    
                     <div className="card-action">
-                        <a className="btn-floating btn-medium waves-effect waves-light light-blue "><i className="material-icons">edit</i></a>
-                        <a className="btn-floating btn-medium waves-effect waves-light red"><i className="material-icons">delete_forever</i></a>
-                        <a className="activator btn-floating btn-medium waves-effect waves-light green"><i className="material-icons">note_add</i></a>
+                        <a className="moveIcon btn-floating btn waves-effect waves-light light-blue "><Link to='Study'><i className="material-icons">menu_book</i></Link></a>
+                        <div class="divider"/>
+                        <a className="btn-floating btn- waves-effect waves-light red"><i className="material-icons">delete_forever</i></a>
+                        <div class="divider"/>
+                        <a className="activator btn-floating btn- waves-effect waves-light green"><i className="material-icons">note_add</i></a>
                     </div>
                     <div className="card-reveal">
                         <span className="card-title grey-text text-darken-4">Notes<i className="material-icons right">check</i></span>
@@ -33,7 +41,7 @@ function Carousel_Item(props) {
                             </form>
                         </div>
                     </div>
-                </div>
+                {/* </div> */}
             </div>
         </div>
     );

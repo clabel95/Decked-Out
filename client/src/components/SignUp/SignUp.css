@@ -1,15 +1,18 @@
 .signUpPopUp{
     position: relative;
-    height: 600px;
-    width: 548px;
-    min-width: 500px;
-    background-image: url('../Assets/greenSticky.png');
+    top: 111px;
+    right: 310px;
+    height: 421px;
+    width: 476px;
+    line-height: 69px;
+    min-width: 468px;
+    background-image: url(../Assets/greenSticky.png);
+    background-size: 476px 421px;
     display: flex;
     justify-content: flex-start;
     flex-direction: column;
     flex-wrap: wrap;
     align-content: space-around;
-    
 }
 
 .popup-inner{
@@ -18,36 +21,41 @@
 }
 
 #signUpHead{
-    font-family: 'Amatic SC', cursive;
+    font-family: 'Josefin Slab', serif;
     font-style: normal;
     font-weight: 100;
-    font-size: 64px;
+    font-size: 58px;
     text-decoration: underline wavy black 1px;;
     position: relative;
-    left: 180px;
-    top: -39px;
+    left: -9px;
+    top: -26px;
     text-shadow: 2px 2px rgb(244, 135, 250);
 }
 
 #formSignUp{
     line-height: 2.5;
-    font-family: 'Amatic SC', cursive;
+    font-family: 'Josefin Slab', serif;
+    text-decoration: underline dotted black 2px;
     font-style: normal;
-    font-weight: 100;
-    font-size: 37px;
+    font-weight: 500;
+    font-size: 33px;
     position: relative;
-    top: -82px;
-    left: 62px;
+    top: -51px;
+    left: 9px;
+}
+
+label{
+    color: black;
 }
 
 .popup-inner .submit-btn{
     /* text-decoration: underline wavy black 1px; */
-    font-family: 'Amatic SC', cursive;
-    font-size: 52px;
+    font-family: 'Josefin Slab', serif;
+    font-size: 50px;
     position: relative;
-    bottom: -19px;
-    right: 161px;
-    border: lightskyblue 9px dotted;
+    bottom: 42px;
+    left: 148px;
+    border: lightskyblue 6px dotted;
     text-shadow: 2px 2px lightskyblue;
 
 }
@@ -66,7 +74,8 @@ input[type="text" i] {
 
 input {
     writing-mode: horizontal-tb !important;
-    font-family: 'Amatic SC', cursive;
+    font-family: 'Josefin Slab', serif;
+    
     font-style: normal;
     font-weight: 500;
     font-size: 34px;
@@ -100,4 +109,29 @@ input {
     border-color: -internal-light-dark(rgb(222, 218, 218), rgb(133, 133, 133));
     border-image: initial;
 }
+
+input[type=text]:not(.browser-default),input[type=password]:not(.browser-default){
+    background-color: transparent;
+    border: none;
+    border-bottom: 2px solid #000000 important!;
+    border-radius: 0;
+    outline: none;
+    height: 3rem;
+    width: 300px;
+    font-size: 31px;
+    margin: 0 0 6px 0;
+    padding: 0;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    -webkit-box-sizing: content-box;
+    box-sizing: content-box;
+    -webkit-transition: border .3s, -webkit-box-shadow .3s;
+    transition: border .3s, -webkit-box-shadow .3s;
+    transition: box-shadow .3s, border .3s;
+    transition: box-shadow .3s, border .3s, -webkit-box-shadow .3s;
+}
+
+
+
+
 
