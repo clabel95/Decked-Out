@@ -10,8 +10,7 @@ import Carousel_User from "../components/Carousel_User/index";
 const User = () => {
   return (
     <main>
-    <Navbar>
-    </Navbar>
+    <Navbar />
       <div className="flex-row justify-center">
         <div>
           <h2>Hello</h2>

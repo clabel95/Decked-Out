@@ -9,8 +9,7 @@ import Navbar from '../components/Navbar'
 const NewCard = () => {
   return (
     <main>
-    <Navbar>
-    </Navbar>
+    <Navbar />
       <div className="flex-row justify-center">
         <div>
           <h2>Hello</h2>
