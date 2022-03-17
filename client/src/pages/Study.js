@@ -9,8 +9,8 @@ import Navbar from '../components/Navbar'
 const Study = () => {
   return (
     <main>
-    <Navbar>
-    </Navbar>
+    <Navbar />
+
       <div className="flex-row justify-center">
         <div>
           <h2>Hello</h2>

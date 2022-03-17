@@ -12,9 +12,10 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 // import NewCard from "./pages/NewCard"
 // import NewDeck from "./pages/NewDeck"
 import Study from "./pages/Study"
-// import User from "./pages/User"
+import User from "./pages/User"
 import Landing from "./components/Landing/Landing";
 import Home from "./pages/Home";
+import Deck_Create from "./components/Deck_Create";
 
 const httpLink = createHttpLink({
   uri: 'http://localhost:3001/graphql',
@@ -55,6 +56,14 @@ function App() {
           <Route
             path='home/study'
             element={<Study />}
+          />
+          <Route
+            path='home/user'
+            element={<User />}
+          />
+          <Route
+            path='home/deck_create'
+            element={<Deck_Create />}
           />
 
 
