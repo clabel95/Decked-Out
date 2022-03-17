@@ -8,7 +8,7 @@ class SearchBar extends Component {
         const opt = {
             edge: "right"
         };
-        // M.SearchBar.init(this.SearchBar, opt);
+        //M.SearchBar.init(this.SearchBar, opt);
         M.AutoInit();
     }
     
@@ -19,7 +19,7 @@ class SearchBar extends Component {
         }
         return (
             <div>
-                <ul id="slide-out" className="sidenav">
+                <ul id="slide-out" className="sidenav no-autoinit">
                     <li>
                         <div className="row">
     
