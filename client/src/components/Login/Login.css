@@ -3,15 +3,12 @@
      height: 398px;
     width: 628px;
     min-width: 500px; */
-   
-     
     display: flex;
     box-shadow: 2px;
 } 
 
 .loginPopup-inner{
     position: relative;
-    left: 5px;
 }
 
 #loginHead{
@@ -21,17 +18,17 @@
     font-size: 64px;
     text-decoration: underline solid black 3px;
     position: relative;
-    left: 102px;
+    left: 88px;
 }
 
 #formLogin{
-    line-height: 2;
+    line-height: 1.75;
     font-family: 'Amatic SC', cursive;
-    font-weight: 515;
-    font-size: 31px;
+    font-weight: 585;
+    font-size: 36px;
     position: relative;
     bottom: 32px;
-    text-decoration: underline solid black 1px;
+    text-decoration: underline solid black 2px;
 }
 
 input {
@@ -41,8 +38,12 @@ input {
 .login-btn{
     font-family: 'Amatic SC', cursive;
     position: relative;
-    
-    
-    text-decoration: underline dotted black 2px;
+    left: 80px;
+    text-decoration: underline solid black 3px;
+    font-size: 72px;
     /* text-shadow: 3px 3px rgb(5, 225, 141); */
+}
+
+input[type=text]:not(.browser-default) {
+    border-bottom: 2px solid black;
 }

@@ -1,7 +1,7 @@
 .signUpPopUp{
     position: relative;
-    height: 600px;
-    width: 548px;
+    height: 541px;
+    width: 693px;
     min-width: 500px;
     background-image: url('../Assets/greenSticky.png');
     display: flex;
@@ -24,20 +24,24 @@
     font-size: 64px;
     text-decoration: underline wavy black 1px;;
     position: relative;
-    left: 180px;
+    left: 140px;
     top: -39px;
     text-shadow: 2px 2px rgb(244, 135, 250);
 }
 
 #formSignUp{
-    line-height: 2.5;
+    line-height: 1.25;
     font-family: 'Amatic SC', cursive;
     font-style: normal;
-    font-weight: 100;
+    font-weight: 500;
     font-size: 37px;
     position: relative;
-    top: -82px;
-    left: 62px;
+    top: -52px;
+    /* left: 62px; */
+}
+
+label{
+    color: black;
 }
 
 .popup-inner .submit-btn{
@@ -45,9 +49,9 @@
     font-family: 'Amatic SC', cursive;
     font-size: 52px;
     position: relative;
-    bottom: -19px;
-    right: 161px;
-    border: lightskyblue 9px dotted;
+    bottom: 38px;
+    left: 148px;
+    border: lightskyblue 6px dotted;
     text-shadow: 2px 2px lightskyblue;
 
 }
@@ -100,4 +104,31 @@ input {
     border-color: -internal-light-dark(rgb(222, 218, 218), rgb(133, 133, 133));
     border-image: initial;
 }
+
+input[type=text]:not(.browser-default),input[type=password]:not(.browser-default){
+    background-color: #fcfcfc;
+    border: none;
+    border-bottom: 2px solid #000000;
+    border-radius: 0;
+    outline: none;
+    height: 3rem;
+    width: 100%;
+    font-size: 31px;
+    margin: 0 0 8px 0;
+    padding: 0;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    -webkit-box-sizing: content-box;
+    box-sizing: content-box;
+    -webkit-transition: border .3s, -webkit-box-shadow .3s;
+    transition: border .3s, -webkit-box-shadow .3s;
+    transition: box-shadow .3s, border .3s;
+    transition: box-shadow .3s, border .3s, -webkit-box-shadow .3s;
+}
+
+/* input[type=text]:not(.browser-default):focus:not([readonly]){
+
+} */
+
+
 

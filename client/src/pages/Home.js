@@ -15,7 +15,10 @@ const Home = () => {
       <Navbar />
       <div className="flex-row justify-center">
         <div>
-          <h2></h2>
+
+
+          <h2>Deck Out</h2>
+
           <Carousel_Home/>
           <SearchBar categories={categories}/>
         </div>

@@ -50,7 +50,7 @@ function SignUp(props){
                 <h2 id= "signUpHead">Sign Up</h2>
                 <form onSubmit={handleFormSubmit} >
                             <label id="formSignUp">
-                                Email:........... .....
+                                Email:
                                 <input
                                 value= {formState.email}
                                 name= "email"
@@ -58,7 +58,7 @@ function SignUp(props){
                                 type="text"
                                 />
                                 <br></br>
-                                Username:. . . ...
+                                Username:
                                 <input 
                                  value= {formState.username}
                                  name= "username"
@@ -66,7 +66,7 @@ function SignUp(props){
                                  type="text"
                                 />
                                 <br></br>
-                                Password:... . .....
+                                Password:
                                 <input 
                                 value= {formState.password}
                                 name= "password"
