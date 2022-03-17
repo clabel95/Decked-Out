@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 import highlighterLogin from '../Assets/highlighterLogin.png';
 import highlighterSignUp from '../Assets/highlighterSignUp.png';
 
@@ -19,7 +19,7 @@ function Landing() {
                 <h1 id="header"> Decked-Out</h1>
 
                 <div id="highlightLogin">
-                    <img id="highlit" src={highlighterLogin} />
+                    <img id="highlit" alt="decorative" src={highlighterLogin} />
                     <div id="login" onClick={() => setLoginPopup(true)}> Login </div>
                     <Login trigger={loginPopup} setTrigger={setLoginPopup} />
 
@@ -28,7 +28,7 @@ function Landing() {
 
 
                 <div id="highlightSignUp">
-                    <img id="highlit" src={highlighterSignUp} />
+                    <img id="highlit" alt="decorative" src={highlighterSignUp} />
                     <div id="signUp" onClick={() => setButtonPopup(true)}> Sign Up </div>
                     <SignUp trigger={buttonPopup} setTrigger={setButtonPopup} />
                     {/* <form >

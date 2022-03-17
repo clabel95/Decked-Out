@@ -10,8 +10,13 @@ const resolvers = {
     },
     //populate one flashcard at a time from the corresponding deck by id
     //DO WE HAVE TO LOOP THROUGH THE OTHER FLASHCARDS SOMEHOW
-    flashcard: async (parent, { category }) => {
-      return await Deck.findById(_id);
+    //WE MAY NEED TO CHANGE THIS
+    //CATEGORY MAY NOT BE THE CORRECT ARGUMENT
+    flashcard: async (parent, { _id }) => {
+      return await Flashcard.findById(_id);
+    },
+    flashcards: async (parent, args) => {
+      return Flashcard.find({});
     },
     //find the user by ID, and populate flashcards and decks at the same time
     user: async (parent, args, context) => {
@@ -22,7 +27,7 @@ const resolvers = {
         });
         return user;
       }
-      throw new AuthenticationError('Not logged in');
+      //throw new AuthenticationError('Not logged in');
     },
   },
   Mutation: {
@@ -64,8 +69,8 @@ const resolvers = {
   },
   // USER IS BEING FOUND BY EMAIL (NO REQUEST FOR USERNAME CURRENTLY BEING USED) 
   // this doesn't exit yet - PASSWORD MUST BE LONGER THAN 8 CHARACTERS TO WORKS
-  login: async (parent, { email, password }) => {
-    const user = await User.findOne({ email });
+  login: async (parent, { username, password }) => {
+    const user = await User.findOne({ username });
 
     if (!user) {
       throw new AuthenticationError('Incorrect credentials');

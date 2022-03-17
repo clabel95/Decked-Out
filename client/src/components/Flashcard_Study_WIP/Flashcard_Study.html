@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Clayton Abel</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" href="./Flashcard_Study.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+
+<body>
+
+    <header>
+        <nav class="light-blue lighten-1" role="navigation">
+            <div class="nav-wrapper container"><a id="logo-container" href="#" class="brand-logo">Decked Out</a>
+                <ul class="right">
+                    <li><a href="#">Logout</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="container row flashcard_study valign-wrapper">
+            <div class = "col s2 button_holder right-align">
+                <a class="waves-effect waves-light btn flow-text valign-wrapper"><i class="material-icons">arrow_back</i></a>
+            </div>
+            <div class="col s8">
+                <div class="card">
+                    <div class="card-content">
+                        <div class="Study center-align" id = "SideA">
+                            <div><p class = "SideA_text flow-text">Text for Side A</p></div>
+                            <a class="waves-effect waves-light btn flow-text" id="SideA_btn" ><i class="material-icons">autorenew</i></a>
+
+                        </div>
+                        <div class="Study center-align hide" id = "SideB">
+                            <div class = "SideB_text flow-text">Text for Side B</div>
+                            <a class="waves-effect waves-light btn flow-text" id="SideB_btn"><i class="material-icons ">autorenew</i></a>
+                        </div>
+                      
+                    </div>
+                  </div>
+            </div>
+            <div class = "col s2 button_holder">
+                <a class="waves-effect waves-light btn flow-text valign-wrapper"><i class="material-icons">arrow_forward</i></a>
+            </div>
+        </div>
+    </main>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="./Flashcard_Study.js"></script>
+</body>
+
+</html>

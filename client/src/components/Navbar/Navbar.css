@@ -1,0 +1,30 @@
+.navbarMain {
+  display: flex;
+  height: 1000px;
+  float: left;
+  width: 25%;
+  align-items: center;
+  position: relative;
+  transform: translateX(-20%);
+  position: relative;
+}
+
+
+.navli {
+  width: 100%;
+  padding: 20px 0;
+  border-radius: 2px;
+   transition:
+    width 1.2s,
+    transform 1.2s; 
+}
+
+.marker:hover {
+  transition: 1.2s;
+  transform: translateX(50px);
+}
+
+img {
+  width: 100%;
+  height: auto;
+}

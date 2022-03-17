@@ -28,7 +28,7 @@ class AuthService {
     login(idToken) {
         localStorage.setItem('id_token', idToken);
         //DO WE NEED TO CHANGE THE PATH HERE IN ORDER TO SHOW THE USER THE DASHBOARD AFTER LOGGING IN?
-        window.location.assign('/')
+        window.location.assign('/home');
     }
 
     logout() {

@@ -1,6 +1,5 @@
 import React from "react";
-import Landing from "./components/Landing/Landing";
-// import Carousel_Home from "./components/Carousel";
+
 import {
   ApolloClient,
   InMemoryCache,
@@ -10,8 +9,15 @@ import {
 import { setContext } from '@apollo/client/link/context';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
+// import NewCard from "./pages/NewCard"
+// import NewDeck from "./pages/NewDeck"
+// import Study from "./pages/Study"
+// import User from "./pages/User"
+import Landing from "./components/Landing/Landing";
+import Home from "./pages/Home";
+
 const httpLink = createHttpLink({
-  uri: '/graphql',
+  uri: 'http://localhost:3001/graphql',
 });
 
 
@@ -42,7 +48,12 @@ function App() {
             path="/"
             element={<Landing />}
           />
-          
+          <Route
+            path='/home'
+            element={<Home />}
+          />
+
+
 
         </Routes>
 
@@ -55,3 +66,20 @@ function App() {
 }
 
 export default App;
+
+          // <Route
+          //   path='/user'
+          //   element={<Home />}
+          // />
+          // <Route
+          //   path='/study'
+          //   element={<Home />}
+          // />
+          // <Route
+          //   path='/new-deck'
+          //   element={<Home />}
+          // />
+          // <Route
+          //   path='/new-card'
+          //   element={<Home />}
+          // />

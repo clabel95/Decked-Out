@@ -16,12 +16,12 @@ const flashcardSchema = new Schema(
         noteSideB: {
             type: String,
         },
-        deck: [
-            {
-                type: Schema.Types.ObjectId,
-                ref: 'deck',
-            },
-        ],
+        // deck: [
+        //     {
+        //         type: Schema.Types.ObjectId,
+        //         ref: 'deck',
+        //     },
+        // ],
         deckTitle: {
             type: String
         }
