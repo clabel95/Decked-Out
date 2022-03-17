@@ -16,7 +16,7 @@ h2{
     background-image: url('../Assets/IndexWhite.png') ;
     background-position: center;
     background-repeat: no-repeat;
-    background-size:cover; 
+    background-size:566px 399px; 
     width: 550px; 
     height: 399px; 
     box-shadow: 0px 5px 20px 10px rgba(2, 2, 2, 0.625);
@@ -25,8 +25,6 @@ h2{
     justify-content: space-evenly;
     align-items: center;
     padding: 5px;
-    
-    
 }
 
 .carousel{
@@ -37,9 +35,9 @@ h2{
 }
 
 .header{
-    font-size: 40px;
+    font-size: 35px;
     position: inherit;
-    right: 50px;
+    right: -17px;
 }
 
 .white-text{
@@ -52,8 +50,8 @@ h2{
     position: relative;
     overflow: hidden;
     z-index: 1;
-    width: 70px;
-    height: 70px;
+    width: 80px;
+    height: 80px;
     line-height: 40p;
     padding: 13px;
     background-color: #26a69a;
@@ -62,6 +60,12 @@ h2{
     transition: background-color .3s;
     cursor: pointer;
     vertical-align: middle;
+}
+
+.divider{
+    width:10px;
+    height:auto;
+    display:inline-block;
 }
 
 .material-icons {
@@ -81,13 +85,16 @@ h2{
 }
 
 .btn-floating i {
-    width: inherit;
+    width: auto;
     display: inline-block;
-    text-align: center;
+    /* text-align: center; */
     color: #fff;
-    font-size: 40px;
-    line-height: 40px;
-    display: flex;
+    font-size: 48px;
+    line-height: 48px;
+    /* display: flex; */
+    position: relative;
+    left: 5px;
+
 } 
 
 
@@ -103,7 +110,7 @@ element.style {
     display: flex;
     height: 747px;
     float: left;
-    width: 21%;
+    width: 20%;
     align-items: center;
     /* position: fixed; */
     transform: translateX(-20%);
@@ -114,5 +121,18 @@ element.style {
     border-top: 1px solid rgba(160,160,160,0.2);
     position: relative;
     padding: -2px -2px;
+}
+
+.card .card-title {
+    font-size: 46px;
+    text-decoration: underline dashed 6px rgb(242, 242, 2);
+    font-weight: 300;
+    position: relative;
+    top: -54px;
+}
+
+.card .card-content {
+    padding: 42px;
+    border-radius: 0 0 2px 2px;
 }
 
