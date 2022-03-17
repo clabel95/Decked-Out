@@ -3,6 +3,7 @@ import './Navbar.css';
 import navhome from '../Assets/navhome.png'
 import navprofile from '../Assets/navprofile.png'
 import navplus from '../Assets/navplus.png'
+import { Link } from 'react-router-dom';
 import Home from "../../pages/Home";
 import User from "../../pages/User";
 import CreateDeck from "../../pages/NewDeck";
@@ -13,20 +14,20 @@ class Navbar extends React.Component {
         <div className="navbarMain">
             <ul>
               <li className="marker">
-                <a href= "{Home}">
+                <Link to='/home'>
                   <img src = {navhome} nav-item = 'true'></img>
-                </a>
+                </Link>
               </li>
               <li className="marker">
-                <a href="{User}">
+                <Link to="carousel_user">
                   <img src = {navprofile} nav-item = 'true'></img>
-                </a>
+                </Link>
               </li>
               <li className="marker">
-                <a href="{CreateDeck}">
+                <Link to='deck_create'>
                   <img src = {navplus} nav-item = 'true'>
                     </img>
-                </a>
+                </Link>
               </li>
             </ul>
         </div>
