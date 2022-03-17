@@ -13,14 +13,19 @@ const NewDeck = () => {
   return (
     <main>
       <Navbar />
-      <div className="flex-row justify-center">
-        <div>
-          <h2>Decked-Out Deck Create</h2>
+      <div className='container'>
+        <div className="flex-row justify-center">
+          <div>
+            <h2>Decked-Out</h2>
 
-          <DeckCreate categories={categories}/>
-          <SearchBar categories={categories}/>
+            <DeckCreate categories={categories}/>
+            
+          </div>
+          
         </div>
+       
       </div>
+      <SearchBar categories={categories}/>
     </main>
   );
 };
