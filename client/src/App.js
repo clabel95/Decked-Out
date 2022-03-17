@@ -10,12 +10,11 @@ import { setContext } from '@apollo/client/link/context';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 // import NewCard from "./pages/NewCard"
-// import NewDeck from "./pages/NewDeck"
 import Study from "./pages/Study"
 import User from "./pages/User"
 import Landing from "./components/Landing/Landing";
 import Home from "./pages/Home";
-import Deck_Create from "./components/Deck_Create";
+import NewDeck from "./pages/NewDeck";
 
 const httpLink = createHttpLink({
   uri: 'http://localhost:3001/graphql',
@@ -63,7 +62,7 @@ function App() {
           />
           <Route
             path='home/deck_create'
-            element={<Deck_Create />}
+            element={<NewDeck />}
           />
 
 

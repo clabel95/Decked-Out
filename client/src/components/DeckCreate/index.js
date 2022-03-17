@@ -1,6 +1,6 @@
 import React from 'react';
 
-function Deck_Create(props) {
+function DeckCreate(props) {
     const category_options = [];
 
     // create html for category options
@@ -18,7 +18,7 @@ function Deck_Create(props) {
                         <span className="card-title">
                             <div className="input-field col s12">
                                 <input id="deck_title" type="text" className="validate"></input>
-                                <label for="deck_title">Deck Title</label>
+                                <label htmlFor="deck_title">Deck Title</label>
                             </div>
                         </span>
 
@@ -32,7 +32,7 @@ function Deck_Create(props) {
 
                         <div className="input-field col s12">
                             <textarea id="textarea1" className="materialize-textarea"></textarea>
-                            <label for="textarea1">Description</label>
+                            <label htmlFor="textarea1">Description</label>
                         </div>
                         
                         <button className="btn waves-effect waves-light" type="submit" name="action">Create Cards</button>
@@ -45,4 +45,4 @@ function Deck_Create(props) {
     );
 }
 
-export default Deck_Create;
+export default DeckCreate;
