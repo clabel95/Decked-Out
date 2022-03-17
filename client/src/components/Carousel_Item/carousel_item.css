@@ -125,14 +125,20 @@ element.style {
 
 .card .card-title {
     font-size: 46px;
-    text-decoration: underline dashed 6px rgb(242, 242, 2);
+    text-decoration: underline dashed 6px rgba(252, 252, 11, 0.687);
     font-weight: 300;
     position: relative;
-    top: -54px;
+    top: -56px;
 }
 
 .card .card-content {
     padding: 42px;
     border-radius: 0 0 2px 2px;
 }
+
+.card .card-reveal{
+    padding: 79px;
+}
+
+
 
