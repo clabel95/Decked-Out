@@ -12,12 +12,14 @@ function Carousel_Home(){
 
     return(
         <div>
+
             {loading ? (
             <div>Loading...</div>
           ) : (
             <Carousel_Container decks={home_decks} />
           )}
         
+
         {/* <Carousel_Container decks={home_decks} /> */}
         </div>
     );
