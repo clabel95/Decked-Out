@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './Login.css';
 import { Link, useNavigate } from 'react-router-dom';
-
+import xicon from '../Assets/xicon.png'
 import { useMutation } from '@apollo/client';
 import { LOGIN_USER } from '../../utils/mutations';
 
@@ -49,6 +49,10 @@ function Login(props) {
         <div className="loginPopup">
             <div className='loginPopup-inner'>
                 <h2 id="loginHead">Login</h2>
+                <button id='xbut' type="button" 
+                    onClick={() => props.trigger=props.setTrigger(false)}>
+                <img src={xicon}></img>
+                </button>
                 <form onSubmit={handleFormSubmit} >
                     <label id="formLogin">
                         Username:
