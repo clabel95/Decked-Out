@@ -10,8 +10,14 @@ import { FLASHCARDS } from '../utils/queries';
 
 const Study = () => {
   const {loading, data} = useQuery(FLASHCARDS);
-  const home_flashcards = data
+  //WE HAVE TO BE SPECIFIC AND TELL IT WHAT WE WANT FROM THE DATA THUS .FLASHCARDS
+  //THE OR OPERATOR IS HERE FOR SAFETY IN CASE WE DON'T GET ANYTHING BACK FROM THE QUERY DATA
+  const flashcardData = data?.flashcards || {}
+  // const home_flashcards = data
   console.log(data);
+  if (loading) {
+    return <h2>Loading...</h2>
+  }
   return (
     <main>
     <Navbar />
@@ -19,7 +25,7 @@ const Study = () => {
       <div className="flex-row justify-center">
         <div>
           <h2>Study</h2>
-          <FlashcardStudy flashcards={home_flashcards}/>
+          <FlashcardStudy flashcards={flashcardData}/>
           {/* <SearchBar/> */}
         </div>
       </div>
