@@ -55,7 +55,7 @@ function App() {
             element={<Home />}
           />
           <Route
-            path='home/study'
+            path='/study'
             element={<Study />}
           />
           <Route
