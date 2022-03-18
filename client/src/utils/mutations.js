@@ -36,17 +36,14 @@ export const ADD_FLASHCARD = gql`
         }
     }`
 export const ADD_DECK = gql`
-    mutation addDeck($title: String!, $category: String!, $description: String!, $date_created: String!) {
-        addDeck(title: $title, category: $category, description: $description, date_created: $date_created) {
-            user {
-                username
-            }
-            decks {
+    mutation addDeck($title: String!, $category: String!, $description: String) {
+        addDeck(title: $title, category: $category, description: $description) {
+            deck {
                 _id
                 title
                 category
                 description
-                date_created
+                flashcards
             }
         }
     }

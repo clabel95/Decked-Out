@@ -39,8 +39,8 @@ const resolvers = {
     return { token, user };
   },
   //adding a deck from the navbar on the side = on the plus sign on page 6 of wireframe, component is deck_create, associated with next button
-  addDeck: async (parent, {args}) => {
-      const deck = await Deck.create({args});
+  addDeck: async (parent, {title, category, description}) => {
+      const deck = await Deck.create({title, category, description});
       return deck;
   },
   // this will be the 'plus' on the same 'next' page from the same component as the previous one

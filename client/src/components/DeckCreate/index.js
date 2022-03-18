@@ -31,7 +31,7 @@ function DeckCreate(props) {
 
     const handleFormSubmit = async (event) => {
         event.preventDefault();
-        console.log(`this is the state of the form ${formState.username}`)
+        console.log(`this is the state of the form ${formState.category}`)
 
         try {
             const { data } = await addDeck({
@@ -63,7 +63,7 @@ function DeckCreate(props) {
                         </span>
 
                         <div className="input-field col s12">
-                            <select>
+                            <select value={formState.category} name="category" onChange={handleChange}>
                             <option value="" disabled selected>Choose category</option>
                             {category_options}
                             </select>
