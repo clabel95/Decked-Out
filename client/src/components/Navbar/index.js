@@ -19,12 +19,12 @@ class Navbar extends React.Component {
                 </Link>
               </li>
               <li className="marker">
-                <Link to="user">
+                <Link to="/user">
                   <img src = {navprofile} nav-item = 'true'></img>
                 </Link>
               </li>
               <li className="marker">
-                <Link to='deck_create'>
+                <Link to='/deck_create'>
                   <img src = {navplus} nav-item = 'true'>
                     </img>
                 </Link>

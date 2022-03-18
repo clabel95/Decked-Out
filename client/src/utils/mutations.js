@@ -12,7 +12,7 @@ export const LOGIN_USER = gql`
     }
 `;
 
-export const  ADD_USER = gql`
+export const ADD_USER = gql`
     mutation addUser($username: String!, $email: String!, $password: String!) {
         addUser(username: $username, email: $email, password: $password) {
             token
@@ -38,9 +38,7 @@ export const ADD_FLASHCARD = gql`
 export const ADD_DECK = gql`
     mutation addDeck($title: String!, $category: String!, $description: String!, $date_created: String!) {
         addDeck(title: $title, category: $category, description: $description, date_created: $date_created) {
-            user {
-                username
-            }
+            token    
             decks {
                 _id
                 title

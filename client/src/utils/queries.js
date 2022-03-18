@@ -11,7 +11,6 @@ query decks{
       category
       description
     }
-
 }
 `
 export const USER_DECKS = gql`
@@ -30,6 +29,10 @@ query userDecks{
 export const FLASHCARDS = gql`
 query flashcards{
     flashcards{
+        _id
         sideA
+        sideB
+        noteSideA
+        noteSideB
     }
 }`
