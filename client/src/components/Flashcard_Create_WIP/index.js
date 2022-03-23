@@ -84,8 +84,8 @@ function Flashcard_Create() {
                         </div>
                     </div>
                     <div className="col s2 button_holder ">
-                        <button className="btn next_card waves-effect waves-light #80cbc4 teal lighten-3" id="new_card" type="submit" name="action">Next Card</button>
-                        <button className="btn next_card waves-effect waves-light #ffab91 deep-orange lighten-3" id="finalize_deck" type="submit" name="action">Finalize</button>
+                        <button className="btn next_card  #80cbc4 teal lighten-3" id="new_card" type="submit" name="action">Next Card</button>
+                        <button className="btn next_card  #ffab91 deep-orange lighten-3" id="finalize_deck" type="submit" name="action">Finalize</button>
                     </div>
                 </form>
                 

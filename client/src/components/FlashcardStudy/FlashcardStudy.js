@@ -49,19 +49,19 @@ function FlashcardStudy(props) {
         <div class="container row flashcard_study valign-wrapper">
             <div class="col s2 button_holder right-align">
                 {/* CURRENTLY THIS IS NOT RERENDERING THE COMPONENT */}
-                <a class="waves-effect waves-light btn flow-text valign-wrapper" onClick={() => Prev_Card()}><i class="material-icons">arrow_back</i></a>
+                <a class="btn flow-text valign-wrapper" onClick={() => Prev_Card()}><i class="material-icons">arrow_back</i></a>
             </div>
             <div class="col s8">
                 <div class="card">
                     <div class="card-content">
                         <div class="Study center-align" id="SideA">
                             <div>{props.flashcards[card_index].sideA}</div>
-                            <a class="waves-effect waves-light btn flow-text" id="SideA_btn" onClick={() => FlipCard()}><i class="material-icons">autorenew</i></a>
+                            <a class="btn flow-text" id="SideA_btn" onClick={() => FlipCard()}><i class="material-icons">autorenew</i></a>
 
                         </div>
                         <div class="Study center-align hide" id="SideB">
                             <div>{props.flashcards[card_index].sideB}</div>
-                            <a class="waves-effect waves-light btn flow-text" id="SideB_btn" onClick={() => FlipCard()}><i class="material-icons ">autorenew</i></a>
+                            <a class="btn flow-text" id="SideB_btn" onClick={() => FlipCard()}><i class="material-icons ">autorenew</i></a>
                         </div>
 
                     </div>
