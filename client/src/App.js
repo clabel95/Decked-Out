@@ -19,7 +19,8 @@ import NewDeck from "./pages/NewDeck";
 import Flashcard_Create from "./components/Flashcard_Create_WIP";
 
 const httpLink = createHttpLink({
-  uri: 'http://localhost:3001/graphql',
+  // uri: 'http://localhost:3001/graphql',
+  uri: process.env.PORT,
 });
 
 
