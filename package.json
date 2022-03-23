@@ -4,6 +4,7 @@
   "description": "A flashcard MERN stack app",
   "main": "server/server.js",
   "scripts": {
+    "start":"node server/server.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "develop": "concurrently \"cd server && npm run watch\" \"cd client && npm start\"",
     "install": "cd server && npm i && cd ../client && npm i",
@@ -21,7 +22,7 @@
   "bugs": {
     "url": "https://github.com/clabel95/Decked-Out/issues"
   },
-  "homepage": "https://clabel95.github.io/Decked-Out",
+  "homepage": "https://decked--out.herokuapp.com/",
   "devDependencies": {
     "concurrently": "^7.0.0"
   },

@@ -14,7 +14,7 @@ import Study from "./pages/Study"
 import User from "./pages/User"
 import Landing from "./components/Landing/Landing";
 import Home from "./pages/Home";
-import DeckCreate from "./components/DeckCreate";
+// import DeckCreate from "./components/DeckCreate";
 import NewDeck from "./pages/NewDeck";
 import Flashcard_Create from "./components/Flashcard_Create_WIP";
 
@@ -64,7 +64,7 @@ function App() {
           />
           <Route
             path='/deck_create'
-            element={<DeckCreate />}
+            // element={<DeckCreate />}
             element={<NewDeck />}
           />
           <Route
