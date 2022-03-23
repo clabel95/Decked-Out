@@ -11,9 +11,9 @@ query decks{
       category
       description
     }
-
 }
 `
+// this is not working yet
 export const USER_DECKS = gql`
 query userDecks{
     decks{
@@ -26,10 +26,16 @@ query userDecks{
 
 }`
 
+// this is not working yet
+//you only need the 'query flashcards' here to put parameters in parenthesis
 
 export const FLASHCARDS = gql`
 query flashcards{
     flashcards{
+        _id
         sideA
+        sideB
+        noteSideA
+        noteSideB
     }
 }`

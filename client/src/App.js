@@ -55,15 +55,15 @@ function App() {
             element={<Home />}
           />
           <Route
-            path='home/study'
+            path='/study'
             element={<Study />}
           />
           <Route
-            path='home/user'
+            path='/user'
             element={<User />}
           />
           <Route
-            path='home/deck_create'
+            path='/deck_create'
             // element={<DeckCreate />}
             element={<NewDeck />}
           />
