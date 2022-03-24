@@ -9,20 +9,18 @@ import SearchBar from '../components/SearchBar/index'
 const User = () => {
   const categories = ["Sports", "Pokemon", "Games"];
   return (
-    <>
     <main>
 
     <Navbar />
       <div className="flex-row justify-center">
         <div>
           <h2>User page</h2>
-          {/* <Carousel_User/> */}
+          <Carousel_User/> 
           <SearchBar categories={categories}/>
         </div>
         
       </div>
     </main>
-    </>
   );
 };
 

@@ -98,7 +98,7 @@ function DeckCreate(props) {
                                     <label htmlFor="textarea1">Description</label>
                                 </div>
 
-                                <button className="btn waves-effect waves-light" type="submit" name="action">Create Cards</button>
+                                <button className="btn " type="submit" name="action">Create Cards</button>
                             </form>
                         </div>
                     </div>

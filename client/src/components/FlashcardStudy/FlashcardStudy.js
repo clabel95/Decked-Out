@@ -22,6 +22,8 @@ function FlashcardStudy(props) {
             // card_index = total_cards -1;
             changeCardIndex(props.flashcards.length -1)
         }
+        document.getElementById("SideB").classList.add("hide");
+        document.getElementById("SideA").classList.remove("hide");
         console.log(card_index)
         console.log(props.flashcards[card_index])
     }
@@ -37,6 +39,8 @@ function FlashcardStudy(props) {
             // card_index = 0;
             changeCardIndex(0)
         }
+        document.getElementById("SideB").classList.add("hide");
+        document.getElementById("SideA").classList.remove("hide");
         console.log(card_index)
         console.log(props.flashcards[card_index])
     }
@@ -49,26 +53,26 @@ function FlashcardStudy(props) {
         <div class="container row flashcard_study valign-wrapper">
             <div class="col s2 button_holder right-align">
                 {/* CURRENTLY THIS IS NOT RERENDERING THE COMPONENT */}
-                <a class="waves-effect waves-light btn flow-text valign-wrapper" onClick={() => Prev_Card()}><i class="material-icons">arrow_back</i></a>
+                <a class="btn flow-text valign-wrapper" onClick={() => Prev_Card()}><i class="material-icons">arrow_back</i></a>
             </div>
             <div class="col s8">
                 <div class="card">
                     <div class="card-content">
                         <div class="Study center-align" id="SideA">
                             <div>{props.flashcards[card_index].sideA}</div>
-                            <a class="waves-effect waves-light btn flow-text" id="SideA_btn" onClick={() => FlipCard()}><i class="material-icons">autorenew</i></a>
+                            <a class="btn flow-text" id="SideA_btn" onClick={() => FlipCard()}><i class="material-icons">autorenew</i></a>
 
                         </div>
                         <div class="Study center-align hide" id="SideB">
                             <div>{props.flashcards[card_index].sideB}</div>
-                            <a class="waves-effect waves-light btn flow-text" id="SideB_btn" onClick={() => FlipCard()}><i class="material-icons ">autorenew</i></a>
+                            <a class="btn flow-text" id="SideB_btn" onClick={() => FlipCard()}><i class="material-icons ">autorenew</i></a>
                         </div>
 
                     </div>
                 </div>
             </div>
             <div class="col s2 button_holder">
-                <a class="waves-effect waves-light btn flow-text valign-wrapper" onClick={() => Next_Card()}><i class="material-icons">arrow_forward</i></a>
+                <a class="btn flow-text valign-wrapper" onClick={() => Next_Card()}><i class="material-icons">arrow_forward</i></a>
             </div>
         </div>
     )
