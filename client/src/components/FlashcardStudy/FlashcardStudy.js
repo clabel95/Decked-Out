@@ -22,6 +22,8 @@ function FlashcardStudy(props) {
             // card_index = total_cards -1;
             changeCardIndex(props.flashcards.length -1)
         }
+        document.getElementById("SideB").classList.add("hide");
+        document.getElementById("SideA").classList.remove("hide");
         console.log(card_index)
         console.log(props.flashcards[card_index])
     }
@@ -37,6 +39,8 @@ function FlashcardStudy(props) {
             // card_index = 0;
             changeCardIndex(0)
         }
+        document.getElementById("SideB").classList.add("hide");
+        document.getElementById("SideA").classList.remove("hide");
         console.log(card_index)
         console.log(props.flashcards[card_index])
     }
@@ -68,7 +72,7 @@ function FlashcardStudy(props) {
                 </div>
             </div>
             <div class="col s2 button_holder">
-                <a class="waves-effect waves-light btn flow-text valign-wrapper" onClick={() => Next_Card()}><i class="material-icons">arrow_forward</i></a>
+                <a class="btn flow-text valign-wrapper" onClick={() => Next_Card()}><i class="material-icons">arrow_forward</i></a>
             </div>
         </div>
     )
