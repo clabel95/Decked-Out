@@ -35,7 +35,8 @@ const typeDefs = gql`
 
   type Query {
     decks: [Deck]
-    flashcard(_id: ID, sideA: String!, sideB: String!): [Flashcard]
+    deck(deckId: ID): Deck
+    flashcard(flashcardId: ID): Flashcard
     flashcards: [Flashcard]
     user: User
   }

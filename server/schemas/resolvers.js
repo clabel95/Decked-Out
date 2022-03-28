@@ -8,12 +8,15 @@ const resolvers = {
         //find all the decks for the homepage and populate the JUST THE DECKS
         return await Deck.find({});//.populate('flashcards');
     },
+    deck: async(parent, {deckId}) => {
+      return await Deck.findOne({ _id: deckId });
+    },
     //populate one flashcard at a time from the corresponding deck by id
     //DO WE HAVE TO LOOP THROUGH THE OTHER FLASHCARDS SOMEHOW
     //WE MAY NEED TO CHANGE THIS
     //CATEGORY MAY NOT BE THE CORRECT ARGUMENT
-    flashcard: async (parent, { _id }) => {
-      return await Flashcard.findById(_id);
+    flashcard: async (parent, { flashcardId }) => {
+      return await Flashcard.findOne({_id: flashcardId});
     },
     flashcards: async (parent, args) => {
       return Flashcard.find({});
