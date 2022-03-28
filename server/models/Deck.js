@@ -1,6 +1,7 @@
 const { Schema, model } = require('mongoose');
 const userSchema = require('./User');
 const flashcardSchema = require('./Flashcard');
+const dateFormat = require('../utils/dateFormat');
 
 const deckSchema = new Schema(
     {
@@ -18,7 +19,8 @@ const deckSchema = new Schema(
         //create helper function for Date Format
         date_created: {
             type: Date,
-            default: Date.now(),
+            default: Date.now,
+            get: (timestamp) => dateFormat(timestamp),
             //this will be a getter function
         },
         //do we need another value here?  name from author schema? - 
