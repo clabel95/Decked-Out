@@ -10,6 +10,9 @@ query decks{
       title
       category
       description
+      flashcards {
+          _id
+      }
     }
 }
 `
@@ -29,6 +32,7 @@ query userDecks{
 // this is not working yet
 //you only need the 'query flashcards' here to put parameters in parenthesis
 
+
 export const FLASHCARDS = gql`
 query flashcards{
     flashcards{
@@ -39,3 +43,30 @@ query flashcards{
         noteSideB
     }
 }`
+
+export const FLASHCARD = gql`
+query getSingleFlashcard($flashcardId: ID!){
+    flashcard(flashcardId: $flashcardId){
+        _id
+        sideA
+        sideB
+        noteSideA
+        noteSideB
+    }
+}`
+
+
+export const STUDY_DECK = gql`
+query getSingleDeck($deckId: ID!){
+    deck(deckId: $deckId){
+      _id
+      title
+      category
+      description
+      author
+      flashcards {
+          _id
+      }
+    }
+}
+`

@@ -1,10 +1,17 @@
 import React, { useState } from 'react';
 import "./Flashcard_Study.css";
+import { useQuery } from '@apollo/client';
+import { FLASHCARD } from '../../utils/queries';
 
 
 function FlashcardStudy(props) {
+    console.log(props.flashcards[0]._id)
+    console.log(props.flashcards[1]._id)
+    const {loading, data} = useQuery(FLASHCARD,{variables:{flashcardId: props.flashcards[1]._id}})
+    console.log("testing data from query")
     // let card_index = 0;
     const [card_index, changeCardIndex] = useState(0)
+    console.log("these are the flashcards getting passed in")
     console.log(props.flashcards)
     function FlipCard() {
         document.getElementById("SideB").classList.toggle("hide");
@@ -17,6 +24,8 @@ function FlashcardStudy(props) {
         if (card_index > 0) {
             // card_index -= 1;
             let index = card_index
+            
+            console.log(data)
             changeCardIndex( index-=1 )
         } else {
             // card_index = total_cards -1;
@@ -32,7 +41,6 @@ function FlashcardStudy(props) {
     function Next_Card() {
         // THIS NEEDS TO BE THE CARD_INDEX.LENGTH
         if (card_index < 43) {
-            // card_index += 1;
             let index = card_index
             changeCardIndex( index+=1 )
         } else {
@@ -41,6 +49,7 @@ function FlashcardStudy(props) {
         }
         document.getElementById("SideB").classList.add("hide");
         document.getElementById("SideA").classList.remove("hide");
+        console.log("------------------")
         console.log(card_index)
         console.log(props.flashcards[card_index])
     }
