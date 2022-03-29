@@ -92,7 +92,7 @@ function DeckCreate(props) {
 
     return (
         <div className="row">
-            <div className="col s12 m6">
+            <div className="col s10 offset-s1">
                 <div className="card white darken-1">
                     <div className="card-content black-text center-align">
                         <div className="row">
