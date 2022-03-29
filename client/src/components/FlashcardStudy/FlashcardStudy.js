@@ -10,7 +10,7 @@ function FlashcardStudy(props) {
         document.getElementById("SideB").classList.toggle("hide");
         document.getElementById("SideA").classList.toggle("hide");
     }
-
+    console.log(card_index)
 
     //decrements the card index value which will change the contents of the displayed flashcard.
     function Prev_Card() {
@@ -31,7 +31,7 @@ function FlashcardStudy(props) {
     //increments the card index value which will change the contents of the displayed flashcard.
     function Next_Card() {
         // THIS NEEDS TO BE THE CARD_INDEX.LENGTH
-        if (card_index < 43) {
+        if (card_index < props.flashcards.flashcard.length -1) {
             let index = card_index
             changeCardIndex( index+=1 )
         } else {
@@ -53,7 +53,7 @@ function FlashcardStudy(props) {
                 <a class="btn flow-text valign-wrapper" onClick={() => Prev_Card()}><i class="material-icons">arrow_back</i></a>
             </div>
             <div class="col s8">
-                <div class="card">
+                <div class="card Study-Card">
                     <div class="card-content">
                         <div class="Study center-align" id="SideA">
                             <div>{props.flashcards.flashcard[card_index].sideA}</div>
