@@ -11,6 +11,9 @@ const resolvers = {
     deck: async(parent, {deckId}) => {
       return await Deck.findOne({ _id: deckId });
     },
+    deckTitle: async(parent,{deckTitle}) =>{
+      return await Deck.findOne({title: deckTitle})
+    },
     //populate one flashcard at a time from the corresponding deck by id
     //DO WE HAVE TO LOOP THROUGH THE OTHER FLASHCARDS SOMEHOW
     //WE MAY NEED TO CHANGE THIS
@@ -47,8 +50,8 @@ const resolvers = {
       return deck;
   },
   // this will be the 'plus' on the same 'next' page from the same component as the previous one
-  addFlashCard: async (parent, {sideA, sideB}) => {
-      const flashcard = await Flashcard.create({sideA, sideB});
+  addFlashCard: async (parent, {sideA, sideB, deck}) => {
+      const flashcard = await Flashcard.create({sideA, sideB, deck});
       return flashcard;
   },
   // NOT NECESSARILY FUNCTIONING IN THE CURRENT SETUP - OPTIONAL

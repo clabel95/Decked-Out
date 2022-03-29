@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import { useMutation } from '@apollo/client';
 import { ADD_DECK } from '../../utils/mutations';
 import { HOME_DECKS } from '../../utils/queries';
+import { Link } from 'react-router-dom';
 
 
 function DeckCreate(props) {
@@ -46,11 +47,16 @@ function DeckCreate(props) {
             const { data } = await addDeck({
                 variables: { title, category, description },
             });
-            setTitleText('');
-            setCategoryText('');
-            setDescritionText('');
+            document.getElementById("Deck").classList.toggle("hide");
+            document.getElementById("Flashcard").classList.toggle("hide");
+            // return <Link push to='/addFlashCard' state = {{title: title }}></Link>
+            // setTitleText('');
+            // setCategoryText('');
+            // setDescritionText('');
+            
         } catch (err) {
             console.log(err);
+        
         }
         //clear form values after submit button
         // setFormState({
@@ -111,7 +117,8 @@ function DeckCreate(props) {
                                     <label htmlFor="textarea1">Description</label>
                                 </div>
 
-                                <button className="btn " type="submit" name="action">Create Cards</button>
+                                <button className="btn "id="Deck" type="submit" name="action">Finalize Deck</button>
+                                <button className="btn hide"id="Flashcard"><Link push to='/addFlashCard' state = {{title: title }}>Create Cards</Link></button>
                             </form>
                         </div>
                     </div>

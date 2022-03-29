@@ -2,8 +2,10 @@ import React, { useState } from 'react';
 import Navbar from '../../components/Navbar'
 //import "./Flashcard_Create.css";
 //import SearchBar from '../../components/SearchBar';
-import { useMutation } from '@apollo/client';
+import { useMutation, useQuery } from '@apollo/client';
 import { ADD_FLASHCARD } from '../../utils/mutations';
+import { DECK_ID } from '../../utils/queries';
+import { useLocation } from 'react-router-dom'
 
 //still need to add the functionality to the next card and finalize deck buttons in a flashcard.js file. 
 
@@ -16,12 +18,25 @@ import { ADD_FLASHCARD } from '../../utils/mutations';
 
 
 function Flashcard_Create() {
+    const location = useLocation();
+    const deckTitle = location.state.title;
+    console.log(deckTitle.toString())
+    const {loading, data} = useQuery(DECK_ID,{variables: {deckTitle: deckTitle}})
+    console.log("checking id") 
+
+    console.log(loading);
+    console.log();
+    const [addFlashCard, { error }] = useMutation(ADD_FLASHCARD)
+
     const categories = ["Sports", "Pokemon", "Games"];
     const [formState, setFormState] = useState({
         sideA: '',
         sideB: '',
+        deck: data.deckTitle._id,
     });
-    const [addFlashCard, { error }] = useMutation(ADD_FLASHCARD)
+    console.log(formState)
+    
+    
 
     const handleChange = (event) => {
         const { name, value } = event.target;
@@ -35,11 +50,13 @@ function Flashcard_Create() {
     const handleFormSubmit = async (event) => {
         event.preventDefault();
         console.log(`this is the state of the form ${formState.sideA}`)
+        console.log(formState)
         try {
             const { data } = await addFlashCard({
                 variables: { ...formState },
             });
-            console.log(data)
+            
+            setFormState({...formState, sideA: '', sideB: ''})
         } catch (err) {
             console.log(err);
         }
