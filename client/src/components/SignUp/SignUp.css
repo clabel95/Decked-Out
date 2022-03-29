@@ -19,6 +19,9 @@
     position: relative;
     left: 15px;
 }
+a{
+    color:black;
+}
 
 #signUpHead{
     font-family: 'Josefin Slab', serif;
