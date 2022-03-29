@@ -5,7 +5,8 @@ import Navbar from '../components/Navbar'
 // import Footer from "../components/Footer_WIP/Footer";
 import FlashcardStudy from "../components/FlashcardStudy/FlashcardStudy";
 import { useQuery } from '@apollo/client';
-import { STUDY_DECK} from '../utils/queries';
+// import { STUDY_DECK} from '../utils/queries';
+import { FLASHCARD } from '../utils/queries';
 import { useLocation } from 'react-router-dom'
 
 
@@ -17,13 +18,13 @@ const Study = (props) => {
   console.log("deck ID-----------------");
   console.log(deckId);
 
-  const {loading, data} = useQuery(STUDY_DECK,{variables: {deckId: deckId}});
-  
+  const {loading, data} = useQuery(FLASHCARD,{variables: {deck: deckId}});
+  console.log(data);
   //WE HAVE TO BE SPECIFIC AND TELL IT WHAT WE WANT FROM THE DATA THUS .FLASHCARDS
   //THE OR OPERATOR IS HERE FOR SAFETY IN CASE WE DON'T GET ANYTHING BACK FROM THE QUERY DATA
-  const flashcardData = data?.deck.flashcards || {}
+  const flashcardData = data || {}
   // const home_flashcards = data
-  console.log(data);
+  
 
   if (loading) {
     return <h2>Loading...</h2>

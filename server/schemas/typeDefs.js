@@ -18,6 +18,7 @@ const typeDefs = gql`
     noteSideA: String
     noteSideB: String
     deckTitle: String
+    deck: ID
   }
 
   type User {
@@ -36,7 +37,7 @@ const typeDefs = gql`
   type Query {
     decks: [Deck]
     deck(deckId: ID): Deck
-    flashcard(flashcardId: ID): Flashcard
+    flashcard(deck: ID): [Flashcard]
     flashcards: [Flashcard]
     user: User
   }
