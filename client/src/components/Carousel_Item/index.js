@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 
 
 function Carousel_Item(props) {
-    console.log(props.name._id)
+    //console.log(props.name._id)
     // Need to somehow link the buttons to the deck that is currently on that deck.
     // If we want the notes for the deck we need to get the text area on line 27 to display data that was previously stored. !!!!
     // !!! This will involve creating a new model that refrences the current user, the deck id, and then the text that the user inputs. !!!
