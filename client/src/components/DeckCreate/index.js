@@ -5,8 +5,6 @@ import { ADD_DECK } from '../../utils/mutations';
 import { HOME_DECKS } from '../../utils/queries';
 import { Link } from 'react-router-dom';
 
-import './DeckCreate.css';
-
 
 function DeckCreate(props) {
     const category_options = [];
@@ -70,6 +68,9 @@ function DeckCreate(props) {
 
     const handleChange = (event) => {
         const { name, value } = event.target;
+        console.log(title); 
+        console.log(name)
+        console.log(value)
         switch (name){
             case "title": setTitleText(value); break; 
             case "category": setCategoryText(value); break;
@@ -90,8 +91,8 @@ function DeckCreate(props) {
     };
 
     return (
-        <div className="row DeckCreate">
-            <div className="col">
+        <div className="row">
+            <div className="col s12 m6">
                 <div className="card white darken-1">
                     <div className="card-content black-text center-align">
                         <div className="row">
