@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, {useEffect, useState } from 'react';
 import Navbar from '../../components/Navbar'
 //import "./Flashcard_Create.css";
 //import SearchBar from '../../components/SearchBar';
@@ -21,26 +21,35 @@ function Flashcard_Create() {
     const location = useLocation();
     const deckTitle = location.state.title;
     console.log(deckTitle.toString())
+    
     const {loading, data} = useQuery(DECK_ID,{variables: {deckTitle: deckTitle}})
-    console.log("checking id") 
+    console.log("checking id")
+    
+
+    
+    
+     
 
     console.log(loading);
-    console.log();
+    //console.log(data.deckTitle._id);
     const [addFlashCard, { error }] = useMutation(ADD_FLASHCARD)
 
     const categories = ["Sports", "Pokemon", "Games"];
     const [formState, setFormState] = useState({
         sideA: '',
         sideB: '',
-        deck: data.deckTitle._id,
+        deck:  '',
     });
     console.log(formState)
     
     
 
     const handleChange = (event) => {
+        console.log(data.deckTitle._id)
         const { name, value } = event.target;
-
+        setFormState({
+            ...formState,
+            deck: data.deckTitle._id});
         setFormState({
             ...formState,
             [name]: value,
@@ -51,9 +60,11 @@ function Flashcard_Create() {
         event.preventDefault();
         console.log(`this is the state of the form ${formState.sideA}`)
         console.log(formState)
+        const deck =  data.deckTitle._id;
+        
         try {
             const { data } = await addFlashCard({
-                variables: { ...formState },
+                variables: { ...formState, deck: deck },
             });
             
             setFormState({...formState, sideA: '', sideB: ''})

@@ -98,6 +98,9 @@ body {
     height:100%; 
 
 }
+#deck_title{
+    width:100%;
+}
 
 button {
     appearance: auto;
