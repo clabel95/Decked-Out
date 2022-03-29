@@ -71,3 +71,12 @@ query getSingleDeck($deckId: ID!){
     }
 }
 `
+
+export const DECK_ID = gql`
+query getSingleDeck($deckTitle: String){
+    deckTitle(deckTitle: $deckTitle){
+      _id
+      title 
+    }
+}
+`

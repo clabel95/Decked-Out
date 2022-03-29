@@ -25,8 +25,8 @@ export const ADD_USER = gql`
 `;
 
 export const ADD_FLASHCARD = gql`
-    mutation addFlashcard($sideA: String!, $sideB: String!) {
-        addFlashCard(sideA: $sideA, sideB: $sideB) {
+    mutation addFlashcard($sideA: String!, $sideB: String!, $deck: ID!) {
+        addFlashCard(sideA: $sideA, sideB: $sideB, deck: $deck) {
 
                 _id
                 sideA

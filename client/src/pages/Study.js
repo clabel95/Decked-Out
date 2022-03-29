@@ -11,7 +11,7 @@ import { useLocation } from 'react-router-dom'
 
 
 
-const Study = (props) => {
+const Study = () => {
   const location = useLocation();
   const deckId = location.state.deck;
   console.log(location)
