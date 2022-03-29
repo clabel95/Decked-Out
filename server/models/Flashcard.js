@@ -24,6 +24,10 @@ const flashcardSchema = new Schema(
         // ],
         deckTitle: {
             type: String
+        },
+        deck: {
+            type: Schema.Types.ObjectId,
+            ref:'deck'
         }
             //WOULD LIKE TO SHOW DECK TITLE HERE
     }

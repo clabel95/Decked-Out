@@ -25,27 +25,24 @@ export const ADD_USER = gql`
 `;
 
 export const ADD_FLASHCARD = gql`
-    mutation addFlashcard($sideA: String!, $sideB: String!) {
-        addFlashCard(sideA: $sideA, sideB: $sideB) {
-            token
-            flashcard {
+    mutation addFlashcard($sideA: String!, $sideB: String!, $deck: ID!) {
+        addFlashCard(sideA: $sideA, sideB: $sideB, deck: $deck) {
+
                 _id
                 sideA
                 sideB
-            }
+        
         }
     }`
 export const ADD_DECK = gql`
-    mutation addDeck($title: String!, $category: String!, $description: String!, $date_created: String!) {
-        addDeck(title: $title, category: $category, description: $description, date_created: $date_created) {
-            token    
-            decks {
+    mutation addDeck($title: String!, $category: String!, $description: String!) {
+        addDeck(title: $title, category: $category, description: $description) {
                 _id
                 title
                 category
                 description
                 date_created
-            }
+
         }
     }
 `;

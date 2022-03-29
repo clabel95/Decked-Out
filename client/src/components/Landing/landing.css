@@ -90,6 +90,14 @@ body {
     border: none;
     text-decoration: 2px underline dashed;
 }
+.Study-Card{
+    background-image: url("../Assets/pencilAndCard.png");
+    background-position:50% 53%;
+    background-repeat: no-repeat;
+    background-size:auto;
+    height:100%; 
+
+}
 
 button {
     appearance: auto;

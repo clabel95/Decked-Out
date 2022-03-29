@@ -8,12 +8,18 @@ const resolvers = {
         //find all the decks for the homepage and populate the JUST THE DECKS
         return await Deck.find({});//.populate('flashcards');
     },
+    deck: async(parent, {deckId}) => {
+      return await Deck.findOne({ _id: deckId });
+    },
+    deckTitle: async(parent,{deckTitle}) =>{
+      return await Deck.findOne({title: deckTitle})
+    },
     //populate one flashcard at a time from the corresponding deck by id
     //DO WE HAVE TO LOOP THROUGH THE OTHER FLASHCARDS SOMEHOW
     //WE MAY NEED TO CHANGE THIS
     //CATEGORY MAY NOT BE THE CORRECT ARGUMENT
-    flashcard: async (parent, { _id }) => {
-      return await Flashcard.findById(_id);
+    flashcard: async (parent, { deck }) => {
+      return await Flashcard.find({deck: deck});
     },
     flashcards: async (parent, args) => {
       return Flashcard.find({});
@@ -39,13 +45,13 @@ const resolvers = {
     return { token, user };
   },
   //adding a deck from the navbar on the side = on the plus sign on page 6 of wireframe, component is deck_create, associated with next button
-  addDeck: async (parent, {title, category}) => {
-      const deck = await Deck.create({title, category});
+  addDeck: async (parent, {title, category, description}) => {
+      const deck = await Deck.create({title, category, description});
       return deck;
   },
   // this will be the 'plus' on the same 'next' page from the same component as the previous one
-  addFlashCard: async (parent, {sideA, sideB}) => {
-      const flashcard = await Flashcard.create({sideA, sideB});
+  addFlashCard: async (parent, {sideA, sideB, deck}) => {
+      const flashcard = await Flashcard.create({sideA, sideB, deck});
       return flashcard;
   },
   // NOT NECESSARILY FUNCTIONING IN THE CURRENT SETUP - OPTIONAL

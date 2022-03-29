@@ -20,7 +20,9 @@ const NewDeck = () => {
             <h2>Decked-Out</h2>
 
             <DeckCreate categories={categories}/>
-            <Link to='/addFlashCard'>createFlashcard</Link>
+            {/* we need to somehow pass through the deck Id that was just created or maybe pass through the deck name and then search for that deck name and retrieve the id from there?
+            I am not sure yet what the best way to do it would be but for now I will pass through the deck name and do a query in flashcard create on that deck name. Also I am moving this link to be inside the deck create.*/}
+            {/* <Link to='/addFlashCard'>createFlashcard</Link> */}
             
             
           </div>

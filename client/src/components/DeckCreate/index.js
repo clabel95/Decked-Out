@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import { useMutation } from '@apollo/client';
 import { ADD_DECK } from '../../utils/mutations';
 import { HOME_DECKS } from '../../utils/queries';
+import { Link } from 'react-router-dom';
 
 
 function DeckCreate(props) {
@@ -12,14 +13,15 @@ function DeckCreate(props) {
     for (let i = 0; i < props.categories.length; i++) {
         category_options.push(<option value={props.categories[i]}>{props.categories[i]}</option>);
     }
-    const [titleText, setTitleText] = useState('');
-    const [categoryText, setCategoryText] = useState('');
+    const [title, setTitleText] = useState('');
+    const [category, setCategoryText] = useState('');
+    const [description, setDescritionText] = useState('');
 
     // const [formState, setFormState] = useState({
     //     title: '',
     //     category: '',
     //     description: '',
-    // });
+    // });sdf
 
     const [addDeck, { error }] = useMutation(ADD_DECK, {
         update(cache, { data: { addDeck } }) {
@@ -38,16 +40,23 @@ function DeckCreate(props) {
 
     const handleFormSubmit = async (event) => {
         event.preventDefault();
-        console.log(`this is the state of the form ${categoryText.category}`)
+        console.log(`this is the state of the form ${category}`)
+        console.log(title.title)
 
         try {
             const { data } = await addDeck({
-                variables: { titleText, categoryText },
+                variables: { title, category, description },
             });
-            setTitleText('');
-            setCategoryText('');
+            document.getElementById("Deck").classList.toggle("hide");
+            document.getElementById("Flashcard").classList.toggle("hide");
+            // return <Link push to='/addFlashCard' state = {{title: title }}></Link>
+            // setTitleText('');
+            // setCategoryText('');
+            // setDescritionText('');
+            
         } catch (err) {
             console.log(err);
+        
         }
         //clear form values after submit button
         // setFormState({
@@ -59,11 +68,21 @@ function DeckCreate(props) {
 
     const handleChange = (event) => {
         const { name, value } = event.target;
-
-        if( name === 'titleText' && value.length <= 15) {
-            setTitleText(value)
-            setCategoryText(value)
+        console.log(title); 
+        console.log(name)
+        console.log(value)
+        switch (name){
+            case "title": setTitleText(value); break; 
+            case "category": setCategoryText(value); break;
+            case "description": setDescritionText(value); break;
+            default: break;
         }
+        
+        // if (name === 'titleText' && value.length <= 15) {
+        //     setTitleText(value)
+        //     setCategoryText(value)
+        //     setDescritionText(value)
+        // }
 
         // setFormState({
         //     ...formState,
@@ -80,13 +99,13 @@ function DeckCreate(props) {
                             <form className="col s12" onSubmit={handleFormSubmit}>
                                 <span className="card-title">
                                     <div className="input-field col s12">
-                                        <input id="deck_title" value={titleText.title} type="text" name="title" className="validate" onChange={handleChange}></input>
+                                        <input id="deck_title" value={title.title} type="text" name="title" className="validate" onChange={handleChange}></input>
                                         <label htmlFor="deck_title">Deck Title</label>
                                     </div>
                                 </span>
 
                                 <div className="input-field col s12">
-                                    <select>
+                                    <select value={category} type="text" name='category' onChange={handleChange}>
                                         <option value="" disabled selected>Choose category</option>
                                         {category_options}
                                     </select>
@@ -94,11 +113,12 @@ function DeckCreate(props) {
                                 </div>
 
                                 <div className="input-field col s12">
-                                    <textarea id="textarea1" className="materialize-textarea" value={categoryText.description} name="description" onChange={handleChange}></textarea>
+                                    <textarea id="textarea1" className="materialize-textarea" value={description} name="description" onChange={handleChange}></textarea>
                                     <label htmlFor="textarea1">Description</label>
                                 </div>
 
-                                <button className="btn " type="submit" name="action">Create Cards</button>
+                                <button className="btn "id="Deck" type="submit" name="action">Finalize Deck</button>
+                                <button className="btn hide"id="Flashcard"><Link push to='/addFlashCard' state = {{title: title }}>Create Cards</Link></button>
                             </form>
                         </div>
                     </div>
