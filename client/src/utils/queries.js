@@ -45,13 +45,14 @@ query flashcards{
 }`
 
 export const FLASHCARD = gql`
-query getSingleFlashcard($flashcardId: ID!){
-    flashcard(flashcardId: $flashcardId){
+query getFullDeck($deck: ID!){
+    flashcard(deck: $deck){
         _id
         sideA
         sideB
         noteSideA
         noteSideB
+        deck
     }
 }`
 

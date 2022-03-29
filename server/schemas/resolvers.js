@@ -15,8 +15,8 @@ const resolvers = {
     //DO WE HAVE TO LOOP THROUGH THE OTHER FLASHCARDS SOMEHOW
     //WE MAY NEED TO CHANGE THIS
     //CATEGORY MAY NOT BE THE CORRECT ARGUMENT
-    flashcard: async (parent, { flashcardId }) => {
-      return await Flashcard.findOne({_id: flashcardId});
+    flashcard: async (parent, { deck }) => {
+      return await Flashcard.find({deck: deck});
     },
     flashcards: async (parent, args) => {
       return Flashcard.find({});
