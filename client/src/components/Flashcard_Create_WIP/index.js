@@ -6,6 +6,7 @@ import { useMutation, useQuery } from '@apollo/client';
 import { ADD_FLASHCARD } from '../../utils/mutations';
 import { DECK_ID } from '../../utils/queries';
 import { useLocation } from 'react-router-dom'
+import { Link } from 'react-router-dom';
 
 //still need to add the functionality to the next card and finalize deck buttons in a flashcard.js file. 
 
@@ -20,10 +21,10 @@ import { useLocation } from 'react-router-dom'
 function Flashcard_Create() {
     const location = useLocation();
     const deckTitle = location.state.title;
-    console.log(deckTitle.toString())
+ 
     
     const {loading, data} = useQuery(DECK_ID,{variables: {deckTitle: deckTitle}})
-    console.log("checking id")
+
     
 
     
@@ -40,12 +41,12 @@ function Flashcard_Create() {
         sideB: '',
         deck:  '',
     });
-    console.log(formState)
+
     
     
 
     const handleChange = (event) => {
-        console.log(data.deckTitle._id)
+
         const { name, value } = event.target;
         setFormState({
             ...formState,
@@ -113,7 +114,7 @@ function Flashcard_Create() {
                     </div>
                     <div className="col s2 button_holder ">
                         <button className="btn next_card  #80cbc4 teal lighten-3" id="new_card" type="submit" name="action">Next Card</button>
-                        <button className="btn next_card  #ffab91 deep-orange lighten-3" id="finalize_deck" type="submit" name="action">Finalize</button>
+                        <a onClick={() => {window.location.href="/home"}}> <button className="btn next_card  #ffab91 deep-orange lighten-3" id="finalize_deck"  name="action">Finalize</button> </a>
                     </div>
                 </form>
                 

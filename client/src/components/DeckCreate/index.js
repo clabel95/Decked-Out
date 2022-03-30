@@ -68,9 +68,6 @@ function DeckCreate(props) {
 
     const handleChange = (event) => {
         const { name, value } = event.target;
-        console.log(title); 
-        console.log(name)
-        console.log(value)
         switch (name){
             case "title": setTitleText(value); break; 
             case "category": setCategoryText(value); break;
