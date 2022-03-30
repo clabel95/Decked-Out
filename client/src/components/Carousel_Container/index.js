@@ -4,6 +4,7 @@ import React, { Component } from 'react';
 import Carousel_Item from '../Carousel_Item/index';
 
 
+
 import M from "materialize-css";
 
 class Carousel extends Component {
