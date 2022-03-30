@@ -125,7 +125,7 @@ element.style {
 
 .card .card-title {
     font-size: 46px;
-    text-decoration: underline dashed 6px rgba(252, 252, 11, 0.687);
+    /* text-decoration: underline dashed 6px rgba(252, 252, 11, 0.687); */
     font-weight: 300;
     position: relative;
     top: -56px;

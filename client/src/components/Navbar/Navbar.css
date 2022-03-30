@@ -5,6 +5,7 @@
   width: 25%;
   align-items: center;
   position: fixed;
+  z-index: 100;
   transform: translateX(-20%);
 }
 

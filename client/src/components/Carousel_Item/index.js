@@ -25,7 +25,7 @@ function Carousel_Item(props) {
                     <div className="card-action">
                         <a className="moveIcon btn-floating btn  light-blue "><Link to='/study' state={{deck: props.name._id}} ><i className="material-icons">menu_book</i></Link></a>
                         <div class="divider"/>
-                        <a className="btn-floating btn-  red"><i className="material-icons">delete_forever</i></a>
+                        {/* <a className="btn-floating btn-  red"><i className="material-icons">delete_forever</i></a> */}
                         <div class="divider"/>
                         <a className="activator btn-floating btn-  green"><i className="material-icons">note_add</i></a>
                     </div>

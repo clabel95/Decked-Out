@@ -9,10 +9,10 @@ import M from "materialize-css";
 class Carousel extends Component {
     componentDidMount() {
         const options = {
-            numVisible: 3,
-            padding: 0,
-            dist:0,
-            duration: 200,
+            numVisible: 5,
+            // padding: 0,
+            // dist:0,
+            // duration: 200,
         };
         M.Carousel.init(this.Carousel, options);
         //Make a function to parse out all the different Carousel items and then add them to the return statment.
