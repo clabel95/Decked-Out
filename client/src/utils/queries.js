@@ -24,9 +24,10 @@ query userDecks{
         title
         category
         description
-        author
-    }
-
+        flashcards {
+            _id
+        }
+      }
 }`
 
 // this is not working yet
