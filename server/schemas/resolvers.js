@@ -9,7 +9,10 @@ const resolvers = {
         return await Deck.find({});//.populate('flashcards');
     },
     deck: async(parent, {deckId}) => {
-      return await Deck.findOne({ _id: deckId });
+      return await Deck.findOne({ _id: deckId});
+    },
+    userDecks: async(parent, {author}) => {
+      return await Deck.find({ author: author});
     },
     deckTitle: async(parent,{deckTitle}) =>{
       return await Deck.findOne({title: deckTitle})
@@ -45,8 +48,8 @@ const resolvers = {
     return { token, user };
   },
   //adding a deck from the navbar on the side = on the plus sign on page 6 of wireframe, component is deck_create, associated with next button
-  addDeck: async (parent, {title, category, description}) => {
-      const deck = await Deck.create({title, category, description});
+  addDeck: async (parent, {title, category, description, author}) => {
+      const deck = await Deck.create({title, category, description, author});
       return deck;
   },
   // this will be the 'plus' on the same 'next' page from the same component as the previous one

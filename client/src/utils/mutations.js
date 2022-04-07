@@ -35,13 +35,14 @@ export const ADD_FLASHCARD = gql`
         }
     }`
 export const ADD_DECK = gql`
-    mutation addDeck($title: String!, $category: String!, $description: String!) {
-        addDeck(title: $title, category: $category, description: $description) {
+    mutation addDeck($title: String!, $category: String!, $description: String!, $author: String!) {
+        addDeck(title: $title, category: $category, description: $description, author: $author) {
                 _id
                 title
                 category
                 description
                 date_created
+                author
 
         }
     }
