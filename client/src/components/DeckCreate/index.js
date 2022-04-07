@@ -5,6 +5,17 @@ import { ADD_DECK } from '../../utils/mutations';
 import { HOME_DECKS } from '../../utils/queries';
 import { Link } from 'react-router-dom';
 
+function parseJwt (token) {
+    var base64Url = token.split('.')[1];
+    var base64 = base64Url.replace(/-/g, '+').replace(/_/g, '/');
+    var jsonPayload = decodeURIComponent(atob(base64).split('').map(function(c) {
+        return '%' + ('00' + c.charCodeAt(0).toString(16)).slice(-2);
+    }).join(''));
+
+    return JSON.parse(jsonPayload);
+};
+
+
 
 function DeckCreate(props) {
     const category_options = [];
@@ -16,36 +27,39 @@ function DeckCreate(props) {
     const [title, setTitleText] = useState('');
     const [category, setCategoryText] = useState('');
     const [description, setDescritionText] = useState('');
-
+    const author = parseJwt(localStorage.getItem("id_token")).data._id.toString();
+    //console.log(author)
     // const [formState, setFormState] = useState({
     //     title: '',
     //     category: '',
     //     description: '',
     // });sdf
 
-    const [addDeck, { error }] = useMutation(ADD_DECK, {
-        update(cache, { data: { addDeck } }) {
-            try {
-                const { newDeck } = cache.readQuery({ query: HOME_DECKS });
+    // const [addDeck, { error }] = useMutation(ADD_DECK, {
+    //     update(cache, { data: { addDeck } }) {
+    //         try {
+    //             const { newDeck } = cache.readQuery({ query: HOME_DECKS });
 
-                cache.writeQuery({
-                    query: HOME_DECKS,
-                    data: { newDeck: [addDeck, ...newDeck] },
-                })
-            } catch (e) {
-                console.log(e);
-            }
-        }
-    });
+    //             cache.writeQuery({
+    //                 query: HOME_DECKS,
+    //                 data: { newDeck: [addDeck, ...newDeck] },
+    //             })
+    //         } catch (e) {
+    //             console.log(e);
+    //         }
+    //     }
+    // });
+    const [addDeck, { error }] = useMutation(ADD_DECK)
 
     const handleFormSubmit = async (event) => {
         event.preventDefault();
-        console.log(`this is the state of the form ${category}`)
-        console.log(title.title)
+        //console.log(`this is the state of the form ${category}`)
+        //console.log(title.title)
+        //console.log(author)
 
         try {
             const { data } = await addDeck({
-                variables: { title, category, description },
+                variables: { title, category, description, author},
             });
             document.getElementById("Deck").classList.toggle("hide");
             document.getElementById("Flashcard").classList.toggle("hide");
