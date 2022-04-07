@@ -16,7 +16,7 @@ class Carousel extends Component {
             // duration: 200,
         };
         console.log("test")
-        console.log(this.props.decks)
+        console.log(this.props.decks.userDecks.length)
         M.Carousel.init(this.Carousel, options);
         //Make a function to parse out all the different Carousel items and then add them to the return statment.
         // const decks = this.props.decks;
@@ -35,12 +35,17 @@ class Carousel extends Component {
     render() {
         return (
             <div className="container">
+                {this.props.decks.userDecks.length == 0 &&
+                <div className = "card"> <h1>No User Decks Found.</h1> </div>
+                }
+                {this.props.decks.userDecks.length != 0 &&
                 <div ref={Carousel => { this.Carousel = Carousel; }} className="carousel row">
                     {(this.props.decks.userDecks).map((title, description, _id) => (
                             <Carousel_Item key={_id} name={title} description={description} />     
                     ))}
-                    
+                
                 </div>
+                }
             </div>
 
 
