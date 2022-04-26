@@ -61,13 +61,13 @@ function DeckCreate(props) {
         
         }
         //clear form values after submit button
-        setFormState({
-            title: '',
-            category: '',
-            description: '',
-        });
-        const newDeckData = data?.decks || {}
-            console.log(newDeckData)
+        // setFormState({
+        //     title: '',
+        //     category: '',
+        //     description: '',
+        // });
+        // const newDeckData = data?.decks || {}
+        //     console.log(newDeckData)
 
     };
 
@@ -93,10 +93,10 @@ function DeckCreate(props) {
             // setCategoryText(value)
             // setDescriptionText(value)
 
-        setFormState({
-            ...formState,
-            [name]: value,
-        });
+        // setFormState({
+        //     ...formState,
+        //     [name]: value,
+        // });
     };
 
 

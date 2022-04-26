@@ -25,7 +25,8 @@
   },
   "homepage": "https://decked--out.herokuapp.com/",
   "devDependencies": {
-    "concurrently": "^7.0.0"
+    "concurrently": "^7.0.0",
+    "jest-dom": "^4.0.0"
   },
   "dependencies": {
     "@apollo/client": "^3.5.10",
