@@ -2,7 +2,7 @@
 
 Authors: Clayton Abel, Benjamin Gomez, Leland Byrd, Steven Schmidt, Sydney Mercier
 
-Published: [Heroku]()
+Published: [Heroku](https://decked--out.herokuapp.com/)
 
 Link: [Repository](https://github.com/clabel95/Decked-Out)
 
