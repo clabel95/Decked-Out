@@ -1,4 +1,4 @@
-import {gql} from '@apollo/client';
+import { gql } from '@apollo/client';
 //make a query for user decks that show all the associated with one user
 
 //user flashcards which is dependent on the deck they have
@@ -18,15 +18,17 @@ query decks{
 `
 // this is not working yet
 export const USER_DECKS = gql`
-query userDecks{
-    decks{
+query userDecks($author: String!){
+    userDecks(author: $author){
         _id
         title
         category
         description
         author
-    }
-
+        flashcards {
+            _id
+        }
+      }
 }`
 
 // this is not working yet

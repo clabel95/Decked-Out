@@ -20,7 +20,7 @@ class SearchBar extends Component {
         }
         return (
             <div>
-                <ul id="slide-out" className="sidenav no-autoinit">
+                <ul id="slide-out" className="sidenav">
                     <li>
                         <div className="row">
     
